@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-07T18:16:27.763Z</updated>
+  <updated>2019-01-08T17:18:07.774Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用hexo-admin随时随地发布hexo博客</title>
+    <link href="http://yoursite.com/2019/01/09/%E4%BD%BF%E7%94%A8hexo-admin%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%91%E5%B8%83hexo%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2019/01/09/使用hexo-admin随时随地发布hexo博客/</id>
+    <published>2019-01-08T16:58:55.000Z</published>
+    <updated>2019-01-08T17:18:07.774Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p>之前通过github page和hexo框架搭建了一个博客系统，一开始在自己的电脑上写完hexo博客，然后敲点命令发布到github上，过程感觉不算太麻烦；但是如果当我们换一台电脑或者是你在公司或者网吧的时候一时兴起想写博客，那么你就必须要在手头上的电脑中配置hexo环境所需要的一系列依赖（其中的麻烦你懂的），才能写博客发布你的博客。为了能够更方便的随时随地都能写博客发布博客,我搭建了一个hexo博客管理系统，下面我就来详细的讲解一下我的搭建流程，希望能够给大家带来帮助，如果描述有误，欢迎大家留言指正。</p><h2 id="我所用到的工具"><a href="#我所用到的工具" class="headerlink" title="我所用到的工具"></a>我所用到的工具</h2><ol><li>hexo-admin</li><li>阿里云服务器</li><li>coding.net一个可以创建免费私有仓库的git服务器</li><li>github page</li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"></div> ]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;闲言&quot;&gt;&lt;a href=&quot;#闲言&quot; class=&quot;headerlink&quot; title=&quot;闲言&quot;&gt;&lt;/a&gt;闲言&lt;/h2&gt;&lt;p&gt;之前通过github page和hexo框架搭建了一个博客系统，一开始在自己的电脑上写完hexo博客，然后敲点命令发布到github上，过程
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CSS左边固定右边自适应布局的几种方式</title>
@@ -448,28 +469,6 @@
       
       
         &lt;h2 id=&quot;闲言&quot;&gt;&lt;a href=&quot;#闲言&quot; class=&quot;headerlink&quot; title=&quot;闲言&quot;&gt;&lt;/a&gt;闲言&lt;/h2&gt;&lt;h2 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTTPS专题一</title>
-    <link href="http://yoursite.com/2018/12/23/HTTPS%E4%B8%93%E9%A2%98%E4%B8%80/"/>
-    <id>http://yoursite.com/2018/12/23/HTTPS专题一/</id>
-    <published>2018-12-23T14:21:22.000Z</published>
-    <updated>2019-01-07T14:22:26.237Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote><p><a href="https://www.cnblogs.com/zxj015/p/6530766.html" target="_blank" rel="noopener">Https协议详解</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/zxj015/p/6530766
       
     
     </summary>
