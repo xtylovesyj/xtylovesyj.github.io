@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>http header详解</title>
+      <link href="/post/956247918.html"/>
+      <url>/post/956247918.html</url>
+      
+        <content type="html"><![CDATA[<div class="note class_name"><p><a href="http://www.cnblogs.com/Joans/p/3956490.html" target="_blank" rel="noopener">HTTP Header 详解</a></p></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>http状态码详解</title>
+      <link href="/post/432560822.html"/>
+      <url>/post/432560822.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="1xx"><a href="#1xx" class="headerlink" title="1xx"></a>1xx</h2><p>指示信息，表示请求被接受，正在处理。</p><ol><li>101 Switching Protocols：服务器将遵从客户端的请求转换到另外一种协议（HTTP1.1）</li></ol><h2 id="2xx"><a href="#2xx" class="headerlink" title="2xx"></a>2xx</h2><p>成功，表示请求正常处理完毕。</p><ol><li>200 OK（成功）:客户端请求成功</li><li>204 No Content（无内容）：服务器成功处理了请求，但没有返回任何内容。</li><li>206 Partial Content（部分内容）：客户发送了一个带有Range头的GET请求，服务器完成了它（代表服务器根据Range头返回了部分内容）</li></ol><h2 id="3xx"><a href="#3xx" class="headerlink" title="3xx"></a>3xx</h2><p>重定向，完成请求必须进行跟进一步的操作</p><ol><li>301 Moved Permanently（永久移动）：所请求的页面已经永久转移至新的url，服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新url</li><li>302 Moved Provisionally（临时移动）：服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求</li><li>304 Not Modified（未修改）：自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容</li></ol><h2 id="4xx"><a href="#4xx" class="headerlink" title="4xx"></a>4xx</h2><p>客户端错误，请求有语法错误或者请求无法实现从而导致服务器无法处理请求</p><ol><li>400 Bad Request（错误请求）：服务器不理解请求的语法</li><li>401 Unauthorized（请求未授权）：请求要求身份验证即发送请求需要Http的认证信息。 对于需要登录的网页，服务器可能返回此响应。</li><li>403 Forbidden（禁止访问）：请求资源的访问被拒绝</li><li>404 Not Fount（没发现）：请求资源不存在</li></ol><h2 id="5xx"><a href="#5xx" class="headerlink" title="5xx"></a>5xx</h2><p>服务器处理请求出错,服务器未能实现合法的请求</p><ol><li>500 Internal Server Error（服务器端错误）：服务器发生不可预期的错误</li><li>503 Server Unavailable（服务器不可用）：服务器目前无法使用（由于超载或停机维护）； 通常，这只是暂时状态</li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://blog.csdn.net/hangmine/article/details/79010025" target="_blank" rel="noopener">常见的HTTP状态码(HTTP Status Code)说明</a><br><a href="https://segmentfault.com/a/1190000008900299" target="_blank" rel="noopener">HTTP 最强资料大全</a><br><a href="http://www.cnblogs.com/scyitgz/p/5216031.html" target="_blank" rel="noopener">返回主页 一鸣先生 手稿</a><br><a href="https://blog.csdn.net/Rnger/article/details/82425961" target="_blank" rel="noopener">状态码401 和 403</a></p></div>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>深入理解vue的computed和watch区别</title>
       <link href="/post/21176862.html"/>
       <url>/post/21176862.html</url>

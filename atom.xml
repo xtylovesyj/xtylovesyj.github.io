@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-14T12:55:17.527Z</updated>
+  <updated>2019-01-16T13:42:59.812Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>http header详解</title>
+    <link href="http://yoursite.com/post/956247918.html"/>
+    <id>http://yoursite.com/post/956247918.html</id>
+    <published>2019-01-16T11:57:00.000Z</published>
+    <updated>2019-01-16T13:42:59.812Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note class_name"><p><a href="http://www.cnblogs.com/Joans/p/3956490.html" target="_blank" rel="noopener">HTTP Header 详解</a></p></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div class=&quot;note class_name&quot;&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/Joans/p/3956490.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HTTP Header 详解&lt;/a&gt;&lt;/p&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>http状态码详解</title>
+    <link href="http://yoursite.com/post/432560822.html"/>
+    <id>http://yoursite.com/post/432560822.html</id>
+    <published>2019-01-16T11:13:29.000Z</published>
+    <updated>2019-01-16T13:42:59.813Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1xx"><a href="#1xx" class="headerlink" title="1xx"></a>1xx</h2><p>指示信息，表示请求被接受，正在处理。</p><ol><li>101 Switching Protocols：服务器将遵从客户端的请求转换到另外一种协议（HTTP1.1）</li></ol><h2 id="2xx"><a href="#2xx" class="headerlink" title="2xx"></a>2xx</h2><p>成功，表示请求正常处理完毕。</p><ol><li>200 OK（成功）:客户端请求成功</li><li>204 No Content（无内容）：服务器成功处理了请求，但没有返回任何内容。</li><li>206 Partial Content（部分内容）：客户发送了一个带有Range头的GET请求，服务器完成了它（代表服务器根据Range头返回了部分内容）</li></ol><h2 id="3xx"><a href="#3xx" class="headerlink" title="3xx"></a>3xx</h2><p>重定向，完成请求必须进行跟进一步的操作</p><ol><li>301 Moved Permanently（永久移动）：所请求的页面已经永久转移至新的url，服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新url</li><li>302 Moved Provisionally（临时移动）：服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求</li><li>304 Not Modified（未修改）：自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容</li></ol><h2 id="4xx"><a href="#4xx" class="headerlink" title="4xx"></a>4xx</h2><p>客户端错误，请求有语法错误或者请求无法实现从而导致服务器无法处理请求</p><ol><li>400 Bad Request（错误请求）：服务器不理解请求的语法</li><li>401 Unauthorized（请求未授权）：请求要求身份验证即发送请求需要Http的认证信息。 对于需要登录的网页，服务器可能返回此响应。</li><li>403 Forbidden（禁止访问）：请求资源的访问被拒绝</li><li>404 Not Fount（没发现）：请求资源不存在</li></ol><h2 id="5xx"><a href="#5xx" class="headerlink" title="5xx"></a>5xx</h2><p>服务器处理请求出错,服务器未能实现合法的请求</p><ol><li>500 Internal Server Error（服务器端错误）：服务器发生不可预期的错误</li><li>503 Server Unavailable（服务器不可用）：服务器目前无法使用（由于超载或停机维护）； 通常，这只是暂时状态</li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://blog.csdn.net/hangmine/article/details/79010025" target="_blank" rel="noopener">常见的HTTP状态码(HTTP Status Code)说明</a><br><a href="https://segmentfault.com/a/1190000008900299" target="_blank" rel="noopener">HTTP 最强资料大全</a><br><a href="http://www.cnblogs.com/scyitgz/p/5216031.html" target="_blank" rel="noopener">返回主页 一鸣先生 手稿</a><br><a href="https://blog.csdn.net/Rnger/article/details/82425961" target="_blank" rel="noopener">状态码401 和 403</a></p></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1xx&quot;&gt;&lt;a href=&quot;#1xx&quot; class=&quot;headerlink&quot; title=&quot;1xx&quot;&gt;&lt;/a&gt;1xx&lt;/h2&gt;&lt;p&gt;指示信息，表示请求被接受，正在处理。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;101 Switching Protocols：服务器将遵从客户端的
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>深入理解vue的computed和watch区别</title>
@@ -443,52 +487,6 @@
       
       
         &lt;h2 id=&quot;nbsp-nbsp-nbsp-nbsp-One-of-the-most-convenient-but-expensive-ways-to-get-around-a-city-in-any-country-is-by-taxi-And-in-some-cases-t
-      
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>How to Attract Boys</title>
-    <link href="http://yoursite.com/post/1339764249.html"/>
-    <id>http://yoursite.com/post/1339764249.html</id>
-    <published>2018-12-25T16:18:24.000Z</published>
-    <updated>2019-01-14T16:33:00.188Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Jason-is-talking-to-Kate-a-classmate-he-likes-very-much-J-Jason-K-Kate"><a href="#Jason-is-talking-to-Kate-a-classmate-he-likes-very-much-J-Jason-K-Kate" class="headerlink" title="Jason is talking to Kate, a classmate he likes very much. (J = Jason, K = Kate)"></a>Jason is talking to Kate, a classmate he likes very much. (J = Jason, K = Kate)</h2><h2 id="J-I-don’t-understand-why-you-dye-your-hair-and-wear-all-kinds-of-weird-colthes-Kate"><a href="#J-I-don’t-understand-why-you-dye-your-hair-and-wear-all-kinds-of-weird-colthes-Kate" class="headerlink" title="J: I don’t understand why you dye your hair and wear all kinds of weird colthes, Kate."></a>J: I don’t understand why you dye your hair and wear all kinds of weird colthes, Kate.</h2><h2 id="K-I-guess-that’s-how-I-attract-boys"><a href="#K-I-guess-that’s-how-I-attract-boys" class="headerlink" title="K: I guess that’s how I attract boys."></a>K: I guess that’s how I attract boys.</h2><h2 id="J-Yes-but-the-wrong-kind-of-boys"><a href="#J-Yes-but-the-wrong-kind-of-boys" class="headerlink" title="J: Yes, but the wrong kind of boys."></a>J: Yes, but the wrong kind of boys.</h2><h2 id="K-What-do-you-mean"><a href="#K-What-do-you-mean" class="headerlink" title="K: What do you mean?"></a>K: What do you mean?</h2><h2 id="J-The-type-of-guys-who-go-out-with-you-wear-earrings-and-have-tattoos-on-their-arms"><a href="#J-The-type-of-guys-who-go-out-with-you-wear-earrings-and-have-tattoos-on-their-arms" class="headerlink" title="J: The type of guys who go out with you wear earrings and have tattoos on their arms."></a>J: The type of guys who go out with you wear earrings and have tattoos on their arms.</h2><h2 id="K-What-kind-of-boys-do-you-think-I-should-go-out-with-then"><a href="#K-What-kind-of-boys-do-you-think-I-should-go-out-with-then" class="headerlink" title="K: What kind of boys do you think I should go out with then?"></a>K: What kind of boys do you think I should go out with then?</h2><h2 id="J-Uh…somebody-like-me-for-instance"><a href="#J-Uh…somebody-like-me-for-instance" class="headerlink" title="J: Uh…somebody like me, for instance."></a>J: Uh…somebody like me, for instance.</h2><h2 id="K-Oh-is-that-so"><a href="#K-Oh-is-that-so" class="headerlink" title="K: Oh, is that so?"></a>K: Oh, is that so?</h2><h2 id="J-The-day-will-come-when-you-know-I’m-right"><a href="#J-The-day-will-come-when-you-know-I’m-right" class="headerlink" title="J:The day will come when you know I’m right."></a>J:The day will come when you know I’m right.</h2><h2 id="K-We’ll-see"><a href="#K-We’ll-see" class="headerlink" title="K: We’ll see."></a>K: We’ll see.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Jason-is-talking-to-Kate-a-classmate-he-likes-very-much-J-Jason-K-Kate&quot;&gt;&lt;a href=&quot;#Jason-is-talking-to-Kate-a-classmate-he-likes-very
-      
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>About Moral Values</title>
-    <link href="http://yoursite.com/post/1201948557.html"/>
-    <id>http://yoursite.com/post/1201948557.html</id>
-    <published>2018-12-24T15:44:41.000Z</published>
-    <updated>2019-01-14T12:55:17.516Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-More-and-more-people-are-forgetting-the-saying-“Pride-comes-before-a-fall”-I-remember-only-a-few-years-ago-when-things-used-to-be-so-different-People-used-to-be-more-modest-and-humble"><a href="#nbsp-nbsp-nbsp-nbsp-More-and-more-people-are-forgetting-the-saying-“Pride-comes-before-a-fall”-I-remember-only-a-few-years-ago-when-things-used-to-be-so-different-People-used-to-be-more-modest-and-humble" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;More and more people are forgetting the saying, “Pride comes before a fall” I remember only a few years ago when things used to be so different. People used to be more modest and humble."></a>&nbsp;&nbsp;&nbsp;&nbsp;More and more people are forgetting the saying, “Pride comes before a fall” I remember only a few years ago when things used to be so different. People used to be more modest and humble.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-As-I-looked-around-at-my-schoolmates-the-other-day-I-realized-how-diferent-things-are-People-are-so-much-more-pretenious-nowadays-With-their-fancy-colthes-and-stylish-hairdos-they-appear-too-materialistic-Which-is-not-to-my-liking-I-know-modernization-is-necessary-for-advancement-However-I-hope-we-don’t-lose-our-traditional-moral-values-along-the-way"><a href="#nbsp-nbsp-nbsp-nbsp-As-I-looked-around-at-my-schoolmates-the-other-day-I-realized-how-diferent-things-are-People-are-so-much-more-pretenious-nowadays-With-their-fancy-colthes-and-stylish-hairdos-they-appear-too-materialistic-Which-is-not-to-my-liking-I-know-modernization-is-necessary-for-advancement-However-I-hope-we-don’t-lose-our-traditional-moral-values-along-the-way" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;As I looked around at my schoolmates the other day. I realized how diferent things are. People are so much more pretenious nowadays. With their fancy colthes and stylish hairdos, they appear too materialistic, Which is not to my liking. I know modernization is necessary for advancement. However, I hope we don’t lose our traditional moral values along the way."></a>&nbsp;&nbsp;&nbsp;&nbsp;As I looked around at my schoolmates the other day. I realized how diferent things are. People are so much more pretenious nowadays. With their fancy colthes and stylish hairdos, they appear too materialistic, Which is not to my liking. I know modernization is necessary for advancement. However, I hope we don’t lose our traditional moral values along the way.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;nbsp-nbsp-nbsp-nbsp-More-and-more-people-are-forgetting-the-saying-“Pride-comes-before-a-fall”-I-remember-only-a-few-years-ago-when-
       
     
     </summary>
