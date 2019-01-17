@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title>http请求头origin和referer区别</title>
+      <link href="/post/2885576345.html"/>
+      <url>/post/2885576345.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p>之前在做web项目中，每次使用chrome调试前端的时候经常会看到请求头header中经常会包含Referer和Origin字段，并且它俩的值有时长的还差不多，网上一查，它俩确实很相似，今天乘着闲暇的机会，整理一下它们各自的作用和区别。本人知识有限，如有错误欢迎留言指正。</p><h2 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h2><p>Referer其实应该是英文单词Referrer，不过拼错的人太多了，所以编写标准的人也就将错就错了。它是客户端请求头的一部分，当浏览器向web服务器发送请求的时候，<strong>一般会带上Referer</strong><font color="red">（不论是get请求还是post请求）</font>，告诉服务器我是从哪个页面链接过来的。比如说有个网址A：<code>https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_1763945507961089360%22%7D&amp;n_type=0&amp;p_from=1</code>，A页面有个链接链接到了网站B：<code>https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9452777449866334360%22%7D&amp;n_type=0&amp;p_from=4</code>，如果你点击A页面的链接请求B页面，那么这时请求B页面的请求头中Referer就是A的网址：<code>https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9452777449866334360%22%7D&amp;n_type=0&amp;p_from=1</code>，你可以在B页面中调用浏览器的调试工具查看请求头验证一下。刚才说了<strong>一般会带上Referer</strong>，那么什么情况下不会带上呢？根据自己的验证和别人的分享，我总结出Referer的存在需要具备两个要素：</p><ol><li>浏览器（客户端）请求（服务器端请求的情况下，是不存在HTTP_REFERER的，但是可以伪造header）</li><li>存在前导页，就是你的页面是从哪个页面链接过来的</li></ol><p>因此根据这两个要素，可以大致列举出不会带上Referer的几种情况如下：</p><ul><li>在浏览器内直接敲URL（没有前导页）</li><li>windows桌面上的超链接图标（原因同上）</li><li>浏览器内书签（同上）</li><li>第三方软件（如Word，Excel等）内容中的链接（不是浏览器）</li><li>使用JavaScript的Location.href或者是Location.replace()</li><li>SSL认证网站跳入(网站部署SSL证书后，可以通过在服务器设置301重定向让HTTP自动跳转到HTTPS，也可以通过设置JS跳转实现HTTP自动跳转到HTTPS）</li></ul><h2 id="Referer的作用"><a href="#Referer的作用" class="headerlink" title="Referer的作用"></a>Referer的作用</h2><ul><li>统计访问这个页面从哪个前导页链接过来的次数</li><li>防止盗链，盗链的解释，请参考<a href="https://baike.baidu.com/item/%E7%9B%97%E9%93%BE?fr=aladdin" target="_blank" rel="noopener">百度百科</a>，当一个请求到达服务器，特别是CDN服务器的时候，CDN服务器可以根据该字段来判断来源站点是否是合作伙伴，或者是可信任的，然后再决定是否将资源返回给它</li><li>防止恶意请求，比如说只允许外部网站访问我的静态资源，对于动态资源，不允许从外部网站访问，这样在一定程度上可以避免CSRF攻击。当然了，依赖客户端的请求是很不可靠的，因为这个可以轻轻松松伪造。</li></ul><h2 id="Origin"><a href="#Origin" class="headerlink" title="Origin"></a>Origin</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://blog.csdn.net/fishmai/article/details/52388840" target="_blank" rel="noopener">Referer详解</a><br><a href="https://blog.csdn.net/zdavb/article/details/51161130" target="_blank" rel="noopener">彻底搞清referrer和origin</a></p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> http </tag>
+            
+            <tag> header </tag>
+            
+            <tag> Origin </tag>
+            
+            <tag> Referer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>详解http请求头host</title>
+      <link href="/post/3695960831.html"/>
+      <url>/post/3695960831.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> http </tag>
+            
+            <tag> header </tag>
+            
+            <tag> host </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>http header详解</title>
       <link href="/post/956247918.html"/>
       <url>/post/956247918.html</url>

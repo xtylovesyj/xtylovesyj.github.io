@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-16T14:46:12.919Z</updated>
+  <updated>2019-01-17T17:08:18.551Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>http请求头origin和referer区别</title>
+    <link href="http://yoursite.com/post/2885576345.html"/>
+    <id>http://yoursite.com/post/2885576345.html</id>
+    <published>2019-01-17T07:37:00.000Z</published>
+    <updated>2019-01-17T17:08:18.551Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p>之前在做web项目中，每次使用chrome调试前端的时候经常会看到请求头header中经常会包含Referer和Origin字段，并且它俩的值有时长的还差不多，网上一查，它俩确实很相似，今天乘着闲暇的机会，整理一下它们各自的作用和区别。本人知识有限，如有错误欢迎留言指正。</p><h2 id="Referer"><a href="#Referer" class="headerlink" title="Referer"></a>Referer</h2><p>Referer其实应该是英文单词Referrer，不过拼错的人太多了，所以编写标准的人也就将错就错了。它是客户端请求头的一部分，当浏览器向web服务器发送请求的时候，<strong>一般会带上Referer</strong><font color="red">（不论是get请求还是post请求）</font>，告诉服务器我是从哪个页面链接过来的。比如说有个网址A：<code>https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_1763945507961089360%22%7D&amp;n_type=0&amp;p_from=1</code>，A页面有个链接链接到了网站B：<code>https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9452777449866334360%22%7D&amp;n_type=0&amp;p_from=4</code>，如果你点击A页面的链接请求B页面，那么这时请求B页面的请求头中Referer就是A的网址：<code>https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9452777449866334360%22%7D&amp;n_type=0&amp;p_from=1</code>，你可以在B页面中调用浏览器的调试工具查看请求头验证一下。刚才说了<strong>一般会带上Referer</strong>，那么什么情况下不会带上呢？根据自己的验证和别人的分享，我总结出Referer的存在需要具备两个要素：</p><ol><li>浏览器（客户端）请求（服务器端请求的情况下，是不存在HTTP_REFERER的，但是可以伪造header）</li><li>存在前导页，就是你的页面是从哪个页面链接过来的</li></ol><p>因此根据这两个要素，可以大致列举出不会带上Referer的几种情况如下：</p><ul><li>在浏览器内直接敲URL（没有前导页）</li><li>windows桌面上的超链接图标（原因同上）</li><li>浏览器内书签（同上）</li><li>第三方软件（如Word，Excel等）内容中的链接（不是浏览器）</li><li>使用JavaScript的Location.href或者是Location.replace()</li><li>SSL认证网站跳入(网站部署SSL证书后，可以通过在服务器设置301重定向让HTTP自动跳转到HTTPS，也可以通过设置JS跳转实现HTTP自动跳转到HTTPS）</li></ul><h2 id="Referer的作用"><a href="#Referer的作用" class="headerlink" title="Referer的作用"></a>Referer的作用</h2><ul><li>统计访问这个页面从哪个前导页链接过来的次数</li><li>防止盗链，盗链的解释，请参考<a href="https://baike.baidu.com/item/%E7%9B%97%E9%93%BE?fr=aladdin" target="_blank" rel="noopener">百度百科</a>，当一个请求到达服务器，特别是CDN服务器的时候，CDN服务器可以根据该字段来判断来源站点是否是合作伙伴，或者是可信任的，然后再决定是否将资源返回给它</li><li>防止恶意请求，比如说只允许外部网站访问我的静态资源，对于动态资源，不允许从外部网站访问，这样在一定程度上可以避免CSRF攻击。当然了，依赖客户端的请求是很不可靠的，因为这个可以轻轻松松伪造。</li></ul><h2 id="Origin"><a href="#Origin" class="headerlink" title="Origin"></a>Origin</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://blog.csdn.net/fishmai/article/details/52388840" target="_blank" rel="noopener">Referer详解</a><br><a href="https://blog.csdn.net/zdavb/article/details/51161130" target="_blank" rel="noopener">彻底搞清referrer和origin</a></p></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;闲言&quot;&gt;&lt;a href=&quot;#闲言&quot; class=&quot;headerlink&quot; title=&quot;闲言&quot;&gt;&lt;/a&gt;闲言&lt;/h2&gt;&lt;p&gt;之前在做web项目中，每次使用chrome调试前端的时候经常会看到请求头header中经常会包含Referer和Origin字段，并且它俩的
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="header" scheme="http://yoursite.com/tags/header/"/>
+    
+      <category term="Origin" scheme="http://yoursite.com/tags/Origin/"/>
+    
+      <category term="Referer" scheme="http://yoursite.com/tags/Referer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>详解http请求头host</title>
+    <link href="http://yoursite.com/post/3695960831.html"/>
+    <id>http://yoursite.com/post/3695960831.html</id>
+    <published>2019-01-17T07:33:00.000Z</published>
+    <updated>2019-01-17T15:49:38.860Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+      <category term="header" scheme="http://yoursite.com/tags/header/"/>
+    
+      <category term="host" scheme="http://yoursite.com/tags/host/"/>
+    
+  </entry>
   
   <entry>
     <title>http header详解</title>
@@ -439,52 +492,6 @@
       
       
         &lt;h2 id=&quot;nbsp-nbsp-nbsp-nbsp-English-is-an-international-language-Therefore-it-is-necessary-for-us-to-learn-it-It-can-be-rewarding-or-just-a-
-      
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Keep the Change</title>
-    <link href="http://yoursite.com/post/3275658214.html"/>
-    <id>http://yoursite.com/post/3275658214.html</id>
-    <published>2018-12-26T13:10:35.000Z</published>
-    <updated>2019-01-14T12:55:17.517Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Jimmy-is-at-the-Boston-Airport-He-hails-a-taxi-T-taxi-driver-J-Jimmy"><a href="#Jimmy-is-at-the-Boston-Airport-He-hails-a-taxi-T-taxi-driver-J-Jimmy" class="headerlink" title="Jimmy is at the Boston Airport. He hails a taxi.(T=taxi driver; J=Jimmy)"></a>Jimmy is at the Boston Airport. He hails a taxi.(T=taxi driver; J=Jimmy)</h2><h2 id="T-Where-to-buddy"><a href="#T-Where-to-buddy" class="headerlink" title="T: Where to, buddy?"></a>T: Where to, buddy?</h2><h2 id="J-The-Sheraton-Hotel-please"><a href="#J-The-Sheraton-Hotel-please" class="headerlink" title="J: The Sheraton Hotel, please."></a>J: The Sheraton Hotel, please.</h2><h2 id="T-Ok-Is-this-your-first-time-in-Boston"><a href="#T-Ok-Is-this-your-first-time-in-Boston" class="headerlink" title="T: Ok. Is this your first time in Boston?"></a>T: Ok. Is this your first time in Boston?</h2><h2 id="J-Yes-What’s-a-good-place-for-sightseeing"><a href="#J-Yes-What’s-a-good-place-for-sightseeing" class="headerlink" title="J: Yes. What’s a good place for sightseeing?"></a>J: Yes. What’s a good place for sightseeing?</h2><h2 id="T-If-you-have-a-lot-of-time-on-your-hands-you-can-walk-the-Freedom-Trail"><a href="#T-If-you-have-a-lot-of-time-on-your-hands-you-can-walk-the-Freedom-Trail" class="headerlink" title="T: If you have a lot of time on your hands, you can walk the Freedom Trail."></a>T: If you have a lot of time on your hands, you can walk the Freedom Trail.</h2><h2 id="J-I’m-kind-of-strapped-for-time"><a href="#J-I’m-kind-of-strapped-for-time" class="headerlink" title="J: I’m kind of strapped for time."></a>J: I’m kind of strapped for time.</h2><h2 id="T-In-that-case-whatever-else-you-do-you-must-check-out-the-observatory-on-the-63rd-floor-of-the-John-Hancock-Building"><a href="#T-In-that-case-whatever-else-you-do-you-must-check-out-the-observatory-on-the-63rd-floor-of-the-John-Hancock-Building" class="headerlink" title="T: In that case, whatever else you do, you must check out the observatory on the 63rd floor of the John Hancock Building."></a>T: In that case, whatever else you do, you must check out the observatory on the 63rd floor of the John Hancock Building.</h2><h2 id="J-Isn’t-the-building-all-glass"><a href="#J-Isn’t-the-building-all-glass" class="headerlink" title="J: Isn’t the building all glass?"></a>J: Isn’t the building all glass?</h2><h2 id="T-That’s-right-You-can’t-miss-it-Here’s-your-hotel-That’ll-be-17-50-please"><a href="#T-That’s-right-You-can’t-miss-it-Here’s-your-hotel-That’ll-be-17-50-please" class="headerlink" title="T: That’s right. You can’t miss it. Here’s your hotel. That’ll be $17.50, please."></a>T: That’s right. You can’t miss it. Here’s your hotel. That’ll be $17.50, please.</h2><h2 id="J-Here’s-20-00-Keep-the-change"><a href="#J-Here’s-20-00-Keep-the-change" class="headerlink" title="J: Here’s $20.00. Keep the change."></a>J: Here’s $20.00. Keep the change.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Jimmy-is-at-the-Boston-Airport-He-hails-a-taxi-T-taxi-driver-J-Jimmy&quot;&gt;&lt;a href=&quot;#Jimmy-is-at-the-Boston-Airport-He-hails-a-taxi-T-tax
-      
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Touring by Taxi</title>
-    <link href="http://yoursite.com/post/1814120177.html"/>
-    <id>http://yoursite.com/post/1814120177.html</id>
-    <published>2018-12-26T00:29:24.000Z</published>
-    <updated>2019-01-14T12:55:17.517Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-One-of-the-most-convenient-but-expensive-ways-to-get-around-a-city-in-any-country-is-by-taxi-And-in-some-cases-tipping-is-expected"><a href="#nbsp-nbsp-nbsp-nbsp-One-of-the-most-convenient-but-expensive-ways-to-get-around-a-city-in-any-country-is-by-taxi-And-in-some-cases-tipping-is-expected" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;One of the most convenient but expensive ways to get around a city in any country is by taxi. And in some cases, tipping is expected."></a>&nbsp;&nbsp;&nbsp;&nbsp;One of the most convenient but expensive ways to get around a city in any country is by taxi. And in some cases, tipping is expected.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-A-taxi-driver-knows-the-city-like-the-back-of-his-hand-He-can-tell-you-whatever-you-want-to-know-At-the-same-time-he’ll-be-your-personal-tour-guide-He-can-take-you-wherever-you-want-to-go-So-however-expensive-the-taxi-ride-may-be-the-advice-you-get-from-the-driver-will-certainly-be-worth-it"><a href="#nbsp-nbsp-nbsp-nbsp-A-taxi-driver-knows-the-city-like-the-back-of-his-hand-He-can-tell-you-whatever-you-want-to-know-At-the-same-time-he’ll-be-your-personal-tour-guide-He-can-take-you-wherever-you-want-to-go-So-however-expensive-the-taxi-ride-may-be-the-advice-you-get-from-the-driver-will-certainly-be-worth-it" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;A taxi driver knows the city like the back of his hand. He can tell you whatever you want to know. At the same time he’ll be your personal tour guide. He can take you wherever you want to go. So, however expensive the taxi ride may be, the advice you get from the driver will certainly be worth it."></a>&nbsp;&nbsp;&nbsp;&nbsp;A taxi driver knows the city like the back of his hand. He can tell you whatever you want to know. At the same time he’ll be your personal tour guide. He can take you wherever you want to go. So, however expensive the taxi ride may be, the advice you get from the driver will certainly be worth it.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;nbsp-nbsp-nbsp-nbsp-One-of-the-most-convenient-but-expensive-ways-to-get-around-a-city-in-any-country-is-by-taxi-And-in-some-cases-t
       
     
     </summary>
