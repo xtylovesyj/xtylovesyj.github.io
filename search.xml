@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Angualr介绍</title>
+      <link href="/post/2552726188.html"/>
+      <url>/post/2552726188.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><ol><li>编译的时候可以代码检查bug，从而减少运行时的bug</li><li>IDE更好的代码提示，和更快的性能</li><li>angular核心就是组件，装饰器模式</li><li>angular组件非常容易编写，装饰器模式更加人性化</li><li>服务器端渲染，可以增强性能也可以提高seo优化</li><li></li></ol><h2 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular CLI"></a>Angular CLI</h2><h2 id="与React对比"><a href="#与React对比" class="headerlink" title="与React对比"></a>与React对比</h2><ol><li>React虚拟dom，先更新虚拟dom，在更新实际dom</li><li>Angular 新的变更检测算法</li><li>Angular 服务器端渲染，服务器预渲染首页加载优化，是seo引擎优化</li><li>单页缺陷是对seo很大缺陷</li></ol><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>不是完整的框架，第三方组件没有Angualr多</p><h2 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h2><p>简单<br>学习和使用不高，中文文档<br>cli更灵活<br>尺寸小，十几k<br>个人主导的，但是angular是google开发的，用的还是微软的typeScript<br>只关注web框架</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"></div> ]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>http请求头origin和referer区别</title>
       <link href="/post/2885576345.html"/>
       <url>/post/2885576345.html</url>
