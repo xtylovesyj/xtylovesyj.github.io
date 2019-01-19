@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-19T03:47:58.523Z</updated>
+  <updated>2019-01-19T06:06:32.990Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>通过css用div画出三角形</title>
+    <link href="http://yoursite.com/post/2276870894.html"/>
+    <id>http://yoursite.com/post/2276870894.html</id>
+    <published>2019-01-19T04:41:13.000Z</published>
+    <updated>2019-01-19T06:06:32.990Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p>通过css可以实现不同样式的三角形，其中的原理可以了解一下<a href="http://www.cnblogs.com/cchyao/archive/2010/07/12/1775846.html" target="_blank" rel="noopener">盒子模型</a>，闲言少叙，直接开始吧！</p><h2 id="基本入门"><a href="#基本入门" class="headerlink" title="基本入门"></a>基本入门</h2><p>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;Static Template&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 100px 100px 100px 100px;</span><br><span class="line">            border-color: red yellow green gray;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            width: 50px;</span><br><span class="line">            height: 50px;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;angel&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><br>效果图如下：<br><img src="/post/2276870894/1.png"><br>代码17行作用是使用标准的盒子模型，如果使用IE盒子模型（box-sizing：border-box;），就不会出现中间的空白方块，大家可以自行测试。当我们调整width和height为5px，效果图如下：<br><img src="/post/2276870894/2.png"><br>当width和height为0时，效果图如下<br><img src="/post/2276870894/3.png"><br>感觉像不像四个三角形拼接在一起，如果我们想要绿色的三角形，我们可以把其它三个边框的颜色设置成transparent,代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 100px 100px 100px 100px;</span><br><span class="line">            border-color: transparent transparent green transparent;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><br>效果图如下：<br><img src="/post/2276870894/4.png"><br>但是其它边的颜色已经透明，但是所占区域还是存在的，我们可以审查一下元素，如图所示：<br><img src="/post/2276870894/5.png"><br>因此我们把上边框的border-width设置为0，得到下图：<br><img src="/post/2276870894/6.png"><br>是不是我们想要达到的效果。我们也可以设置左边或者右边的border为0，得到该三角形其中的一半（也是一个三角形），代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 0 100px 100px 0;</span><br><span class="line">            border-color: transparent transparent green transparent;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><br>效果图如下：<br><img src="/post/2276870894/7.png"><br>因此通过调整border不同方向的width和color，我们就可以得到任意不同方向的三角形。</p><h2 id="实战练习"><a href="#实战练习" class="headerlink" title="实战练习"></a>实战练习</h2><h3 id="1-实现一个角度为30度的直角三角形"><a href="#1-实现一个角度为30度的直角三角形" class="headerlink" title="1. 实现一个角度为30度的直角三角形"></a>1. 实现一个角度为30度的直角三角形</h3><p>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 0px 100px 173px 0px;</span><br><span class="line">            border-color: transparent transparent green transparent;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><br>如图所示：<br><img src="/post/2276870894/8.png"></p><h3 id="2-实现一个带有边框的三角形"><a href="#2-实现一个带有边框的三角形" class="headerlink" title="2. 实现一个带有边框的三角形"></a>2. 实现一个带有边框的三角形</h3><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="http://www.cnblogs.com/v-weiwang/p/5057588.html" target="_blank" rel="noopener">css如何将div画成三角形</a></p></div> ]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;闲言&quot;&gt;&lt;a href=&quot;#闲言&quot; class=&quot;headerlink&quot; title=&quot;闲言&quot;&gt;&lt;/a&gt;闲言&lt;/h2&gt;&lt;p&gt;通过css可以实现不同样式的三角形，其中的原理可以了解一下&lt;a href=&quot;http://www.cnblogs.com/cchyao/ar
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Angualr介绍</title>
     <link href="http://yoursite.com/post/2552726188.html"/>
     <id>http://yoursite.com/post/2552726188.html</id>
     <published>2019-01-19T03:16:59.000Z</published>
-    <updated>2019-01-19T03:47:58.523Z</updated>
+    <updated>2019-01-19T04:33:30.023Z</updated>
     
     <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><ol><li>编译的时候可以代码检查bug，从而减少运行时的bug</li><li>IDE更好的代码提示，和更快的性能</li><li>angular核心就是组件，装饰器模式</li><li>angular组件非常容易编写，装饰器模式更加人性化</li><li>服务器端渲染，可以增强性能也可以提高seo优化</li><li></li></ol><h2 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular CLI"></a>Angular CLI</h2><h2 id="与React对比"><a href="#与React对比" class="headerlink" title="与React对比"></a>与React对比</h2><ol><li>React虚拟dom，先更新虚拟dom，在更新实际dom</li><li>Angular 新的变更检测算法</li><li>Angular 服务器端渲染，服务器预渲染首页加载优化，是seo引擎优化</li><li>单页缺陷是对seo很大缺陷</li></ol><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>不是完整的框架，第三方组件没有Angualr多</p><h2 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h2><p>简单<br>学习和使用不高，中文文档<br>cli更灵活<br>尺寸小，十几k<br>个人主导的，但是angular是google开发的，用的还是微软的typeScript<br>只关注web框架</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"></div> ]]></content>
     
@@ -470,29 +491,6 @@
       
       
         &lt;h2 id=&quot;nbsp-nbsp-nbsp-nbsp-Listening-to-music-is-the-favorite-pastime-of-many-people-all-over-the-world-This-is-escpecially-true-for-people
-      
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>How to improve Your English</title>
-    <link href="http://yoursite.com/post/565400138.html"/>
-    <id>http://yoursite.com/post/565400138.html</id>
-    <published>2018-12-27T12:53:24.000Z</published>
-    <updated>2019-01-14T12:55:17.518Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Mack-is-talking-to-his-frient-Don-M-Mack-D-Don"><a href="#Mack-is-talking-to-his-frient-Don-M-Mack-D-Don" class="headerlink" title="Mack is talking to his frient Don.(M=Mack, D=Don)"></a>Mack is talking to his frient Don.(M=Mack, D=Don)</h2><h2 id="M-Hi-Don-How-are-you-doing-in-your-English-class"><a href="#M-Hi-Don-How-are-you-doing-in-your-English-class" class="headerlink" title="M: Hi, Don! How are you doing in your English class?"></a>M: Hi, Don! How are you doing in your English class?</h2><h2 id="D-Not-so-well-I’m-afraid"><a href="#D-Not-so-well-I’m-afraid" class="headerlink" title="D: Not so well, I’m afraid."></a>D: Not so well, I’m afraid.</h2><h2 id="M-What’s-the-problem"><a href="#M-What’s-the-problem" class="headerlink" title="M: What’s the problem?"></a>M: What’s the problem?</h2><h2 id="D-I’m-not-imporving-Tell-me-how-come-your-English-is-so-good"><a href="#D-I’m-not-imporving-Tell-me-how-come-your-English-is-so-good" class="headerlink" title="D: I’m not imporving. Tell me, how come your English is so good?"></a>D: I’m not imporving. Tell me, how come your English is so good?</h2><h2 id="M-Well-uh…I-have-an-American-girlfriend"><a href="#M-Well-uh…I-have-an-American-girlfriend" class="headerlink" title="M: Well, uh…I have an American girlfriend."></a>M: Well, uh…I have an American girlfriend.</h2><h2 id="D-Aha-That’s-it-Now-I-know-what-to-do-He-runs-off"><a href="#D-Aha-That’s-it-Now-I-know-what-to-do-He-runs-off" class="headerlink" title="D: Aha! That’s it. Now I know what to do.(He runs off.)"></a>D: Aha! That’s it. Now I know what to do.(He runs off.)</h2><h2 id="M-Hey-come-back-I-was-just-kidding"><a href="#M-Hey-come-back-I-was-just-kidding" class="headerlink" title="M: Hey, come back! I was just kidding!"></a>M: Hey, come back! I was just kidding!</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Mack-is-talking-to-his-frient-Don-M-Mack-D-Don&quot;&gt;&lt;a href=&quot;#Mack-is-talking-to-his-frient-Don-M-Mack-D-Don&quot; class=&quot;headerlink&quot; title=&quot;
       
     
     </summary>
