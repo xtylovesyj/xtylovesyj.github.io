@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-26T09:17:06.987Z</updated>
+  <updated>2019-01-28T14:32:00.913Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html页面渲染过程详解</title>
+    <link href="http://yoursite.com/post/3918118019.html"/>
+    <id>http://yoursite.com/post/3918118019.html</id>
+    <published>2019-01-28T14:11:47.000Z</published>
+    <updated>2019-01-28T14:32:00.913Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/dojo-lzz/p/3983335.html" target="_blank" rel="noopener">HTML渲染过程详解</a><br><a href="https://www.cnblogs.com/chenjg/p/10099886.html" target="_blank" rel="noopener">你真的了解回流和重绘吗</a><br><a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a></p></div> ]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;闲言&quot;&gt;&lt;a href=&quot;#闲言&quot; class=&quot;headerlink&quot; title=&quot;闲言&quot;&gt;&lt;/a&gt;闲言&lt;/h2&gt;&lt;h2 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; class=&quot;headerlink&quot; title=&quot;参考文献&quot;&gt;&lt;/a&gt;参考文献&lt;/h
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ES6的Rest参数和对象展开运算符</title>
@@ -462,31 +483,6 @@
       
       
         &lt;h2 id=&quot;Sally-is-talking-with-her-friend-Don-S-Sally-D-Don&quot;&gt;&lt;a href=&quot;#Sally-is-talking-with-her-friend-Don-S-Sally-D-Don&quot; class=&quot;headerlink&quot;
-      
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Dying Languages</title>
-    <link href="http://yoursite.com/post/3018116520.html"/>
-    <id>http://yoursite.com/post/3018116520.html</id>
-    <published>2018-12-28T14:58:22.000Z</published>
-    <updated>2019-01-14T12:55:17.519Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-Today-more-people-than-ever-before-are-speaking-to-each-other-through-satellite-television-cellular-telephones-and-computers-This-means-that-people-from-different-parts-of-the-world-need-to-be-able-to-communicate-in-the-same-langulage-That-language-happens-to-be-English"><a href="#nbsp-nbsp-nbsp-nbsp-Today-more-people-than-ever-before-are-speaking-to-each-other-through-satellite-television-cellular-telephones-and-computers-This-means-that-people-from-different-parts-of-the-world-need-to-be-able-to-communicate-in-the-same-langulage-That-language-happens-to-be-English" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Today, more people than ever before are speaking to each other through satellite television, cellular telephones and computers. This means that people from different parts of the world need to be able to communicate in the same langulage. That language happens to be English."></a>&nbsp;&nbsp;&nbsp;&nbsp;Today, more people than ever before are speaking to each other through satellite television, cellular telephones and computers. This means that people from different parts of the world need to be able to communicate in the same langulage. That language happens to be English.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-Because-of-this-experts-have-predicted-that-more-than-half-of-the-world’s-6-000-languages-may-die-out-in-the-next-century-Already-almost-all-Californian-Native-American-languages-are-in-danger-of-extinction-They-are-being-swallowed-up-by-English-and-other-languages-It-is-a-pity-but-that-is-one-of-the-prices-of-modernization"><a href="#nbsp-nbsp-nbsp-nbsp-Because-of-this-experts-have-predicted-that-more-than-half-of-the-world’s-6-000-languages-may-die-out-in-the-next-century-Already-almost-all-Californian-Native-American-languages-are-in-danger-of-extinction-They-are-being-swallowed-up-by-English-and-other-languages-It-is-a-pity-but-that-is-one-of-the-prices-of-modernization" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Because of this, experts have predicted that more than half of the world’s 6,000 languages may die out in the next century. Already almost all Californian Native American languages are in danger of extinction. They are being swallowed up by English and other languages. It is a pity, but that is one of the prices of modernization."></a>&nbsp;&nbsp;&nbsp;&nbsp;Because of this, experts have predicted that more than half of the world’s 6,000 languages may die out in the next century. Already almost all Californian Native American languages are in danger of extinction. They are being swallowed up by English and other languages. It is a pity, but that is one of the prices of modernization.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note success"><p>赖世雄美语从头学-中级篇（上）</p></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;nbsp-nbsp-nbsp-nbsp-Today-more-people-than-ever-before-are-speaking-to-each-other-through-satellite-television-cellular-telephones-a
       
     
     </summary>
