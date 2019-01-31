@@ -4,11 +4,24 @@
   
     
     <entry>
+      <title>如何进行前端网页性能优化</title>
+      <link href="/post/3048684187.html"/>
+      <url>/post/3048684187.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><img src="/post/3048684187/main.jpeg"><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.jianshu.com/p/fe32ef31deed" target="_blank" rel="noopener">前端性能优化总结</a><br>    <a href="https://www.cnblogs.com/dreamowneryong/p/4773201.html" target="_blank" rel="noopener">base64图片解析</a><br>     <a href="https://www.jianshu.com/p/10ca32480c1e" target="_blank" rel="noopener">base64和css sprites的区别</a><br>     <a href="https://harttle.land/2016/05/18/async-javascript-loading.html" target="_blank" rel="noopener">异步加载脚本</a><br>     <a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a></p></div> ]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>html页面渲染过程详解</title>
       <link href="/post/3918118019.html"/>
       <url>/post/3918118019.html</url>
       
-        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/dojo-lzz/p/3983335.html" target="_blank" rel="noopener">HTML渲染过程详解</a><br><a href="https://www.cnblogs.com/chenjg/p/10099886.html" target="_blank" rel="noopener">你真的了解回流和重绘吗</a><br><a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a></p></div> ]]></content>
+        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/dojo-lzz/p/3983335.html" target="_blank" rel="noopener">HTML渲染过程详解</a><br><a href="https://www.cnblogs.com/chenjg/p/10099886.html" target="_blank" rel="noopener">你真的了解回流和重绘吗</a><br><a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a><br><a href="https://blog.csdn.net/cristina_song/article/details/77512534" target="_blank" rel="noopener">js执行会阻塞DOM树的解析和渲染，那么css加载会阻塞DOM树的解析和渲染吗</a></p></div>]]></content>
       
       
       

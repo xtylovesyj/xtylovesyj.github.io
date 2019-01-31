@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-28T14:32:00.913Z</updated>
+  <updated>2019-01-31T15:33:16.320Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何进行前端网页性能优化</title>
+    <link href="http://yoursite.com/post/3048684187.html"/>
+    <id>http://yoursite.com/post/3048684187.html</id>
+    <published>2019-01-31T15:25:48.000Z</published>
+    <updated>2019-01-31T15:33:16.320Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><img src="/post/3048684187/main.jpeg"><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.jianshu.com/p/fe32ef31deed" target="_blank" rel="noopener">前端性能优化总结</a><br>    <a href="https://www.cnblogs.com/dreamowneryong/p/4773201.html" target="_blank" rel="noopener">base64图片解析</a><br>     <a href="https://www.jianshu.com/p/10ca32480c1e" target="_blank" rel="noopener">base64和css sprites的区别</a><br>     <a href="https://harttle.land/2016/05/18/async-javascript-loading.html" target="_blank" rel="noopener">异步加载脚本</a><br>     <a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a></p></div> ]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;闲言&quot;&gt;&lt;a href=&quot;#闲言&quot; class=&quot;headerlink&quot; title=&quot;闲言&quot;&gt;&lt;/a&gt;闲言&lt;/h2&gt;&lt;img src=&quot;/post/3048684187/main.jpeg&quot;&gt;
+&lt;h2 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot; clas
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>html页面渲染过程详解</title>
     <link href="http://yoursite.com/post/3918118019.html"/>
     <id>http://yoursite.com/post/3918118019.html</id>
     <published>2019-01-28T14:11:47.000Z</published>
-    <updated>2019-01-28T14:32:00.913Z</updated>
+    <updated>2019-01-31T15:23:49.786Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/dojo-lzz/p/3983335.html" target="_blank" rel="noopener">HTML渲染过程详解</a><br><a href="https://www.cnblogs.com/chenjg/p/10099886.html" target="_blank" rel="noopener">你真的了解回流和重绘吗</a><br><a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a></p></div> ]]></content>
+    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/dojo-lzz/p/3983335.html" target="_blank" rel="noopener">HTML渲染过程详解</a><br><a href="https://www.cnblogs.com/chenjg/p/10099886.html" target="_blank" rel="noopener">你真的了解回流和重绘吗</a><br><a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a><br><a href="https://blog.csdn.net/cristina_song/article/details/77512534" target="_blank" rel="noopener">js执行会阻塞DOM树的解析和渲染，那么css加载会阻塞DOM树的解析和渲染吗</a></p></div>]]></content>
     
     <summary type="html">
     
@@ -466,31 +488,6 @@
     
       <category term="English" scheme="http://yoursite.com/categories/English/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Speaking the Same Language</title>
-    <link href="http://yoursite.com/post/499453591.html"/>
-    <id>http://yoursite.com/post/499453591.html</id>
-    <published>2018-12-28T15:00:38.000Z</published>
-    <updated>2019-01-14T12:55:17.520Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Sally-is-talking-with-her-friend-Don-S-Sally-D-Don"><a href="#Sally-is-talking-with-her-friend-Don-S-Sally-D-Don" class="headerlink" title="Sally is talking with her friend, Don.(S=Sally; D=Don)"></a>Sally is talking with her friend, Don.(S=Sally; D=Don)</h2><h2 id="S-Tell-me-Don-How-come-you’re-from-Spain-but-you-can’t-speak-Spanish-very-well"><a href="#S-Tell-me-Don-How-come-you’re-from-Spain-but-you-can’t-speak-Spanish-very-well" class="headerlink" title="S: Tell me, Don. How come you’re from Spain but you can’t speak Spanish very well?"></a>S: Tell me, Don. How come you’re from Spain but you can’t speak Spanish very well?</h2><h2 id="D-It’s-not-my-mother-tongue-My-father-is-Spanish-and-my-mother-is-American-We-usually-speak-English-at-home"><a href="#D-It’s-not-my-mother-tongue-My-father-is-Spanish-and-my-mother-is-American-We-usually-speak-English-at-home" class="headerlink" title="D: It’s not my mother tongue. My father is Spanish and my mother is American. We usually speak English at home."></a>D: It’s not my mother tongue. My father is Spanish and my mother is American. We usually speak English at home.</h2><h2 id="S-Oh-I-see"><a href="#S-Oh-I-see" class="headerlink" title="S: Oh, I see."></a>S: Oh, I see.</h2><h2 id="D-Your-Spanish-is-probably-better-than-mine"><a href="#D-Your-Spanish-is-probably-better-than-mine" class="headerlink" title="D: Your Spanish is probably better than mine."></a>D: Your Spanish is probably better than mine.</h2><h2 id="S-Yes-but-you-speak-English-more-fluently-than-I"><a href="#S-Yes-but-you-speak-English-more-fluently-than-I" class="headerlink" title="S: Yes, but you speak English more fluently than I."></a>S: Yes, but you speak English more fluently than I.</h2><h2 id="D-How-come-Aren’t-you-American"><a href="#D-How-come-Aren’t-you-American" class="headerlink" title="D: How come? Aren’t you American?"></a>D: How come? Aren’t you American?</h2><h2 id="S-Yes-but-my-mother-is-Spanish"><a href="#S-Yes-but-my-mother-is-Spanish" class="headerlink" title="S: Yes, but my mother is Spanish."></a>S: Yes, but my mother is Spanish.</h2><h2 id="D-Don’t-tell-me…"><a href="#D-Don’t-tell-me…" class="headerlink" title="D: Don’t tell me…"></a>D: Don’t tell me…</h2><h2 id="S-That’s-right-We-usually-speak-Spanish-at-home"><a href="#S-That’s-right-We-usually-speak-Spanish-at-home" class="headerlink" title="S: That’s right. We usually speak Spanish at home."></a>S: That’s right. We usually speak Spanish at home.</h2><h2 id="D-It-doesn’t-matter-as-long-as-we-can-communicate"><a href="#D-It-doesn’t-matter-as-long-as-we-can-communicate" class="headerlink" title="D: It doesn’t matter as long as we can communicate."></a>D: It doesn’t matter as long as we can communicate.</h2><h2 id="S-That’s-true"><a href="#S-That’s-true" class="headerlink" title="S: That’s true."></a>S: That’s true.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note success"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Sally-is-talking-with-her-friend-Don-S-Sally-D-Don&quot;&gt;&lt;a href=&quot;#Sally-is-talking-with-her-friend-Don-S-Sally-D-Don&quot; class=&quot;headerlink&quot;
-      
-    
-    </summary>
-    
-      <category term="English" scheme="http://yoursite.com/categories/English/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
     
   </entry>
   
