@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>如何注意前端浏览器兼容性问题</title>
+      <link href="/post/1118069504.html"/>
+      <url>/post/1118069504.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"></div> ]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>短/长轮询和WebSocket的优缺点</title>
       <link href="/post/1122290469.html"/>
       <url>/post/1122290469.html</url>
@@ -331,7 +344,7 @@
       <link href="/post/2399374655.html"/>
       <url>/post/2399374655.html</url>
       
-        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p><script src="https://gist.github.com/xtylovesyj/210e36aec55099b2ff9dcc4b1448e536.js"></script></p><p><script src="https://gist.github.com/xtylovesyj/6f3ab21ccc2421b0dfec94b0b2ce3bbe.js"></script></p><p><script src="https://gist.github.com/xtylovesyj/2b3a69b52b97f7f1176ef1b766dfd3bc.js"></script></p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/libin-1/p/6893712.html" target="_blank" rel="noopener"><font color="red">vue的双向绑定原理及实现</font></a></p></div>]]></content>
+        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p><script src="https://gist.github.com/xtylovesyj/210e36aec55099b2ff9dcc4b1448e536.js"></script></p><p><script src="https://gist.github.com/xtylovesyj/6f3ab21ccc2421b0dfec94b0b2ce3bbe.js"></script></p><p><script src="https://gist.github.com/xtylovesyj/2b3a69b52b97f7f1176ef1b766dfd3bc.js"></script></p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.w3cplus.com/vue/vue-two-way-binding.html" target="_blank" rel="noopener">Vue的双向绑定原理及实现</a><br><a href="https://www.cnblogs.com/libin-1/p/6893712.html" target="_blank" rel="noopener"><font color="red">vue的双向绑定原理及实现</font></a></p></div>]]></content>
       
       
       <categories>
