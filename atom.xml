@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-21T16:29:31.668Z</updated>
+  <updated>2019-02-20T13:58:48.155Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>蛋白质结构预测系统</title>
-    <link href="http://yoursite.com/post/4196458460.html"/>
-    <id>http://yoursite.com/post/4196458460.html</id>
-    <published>2019-02-21T15:09:54.000Z</published>
-    <updated>2019-02-21T16:29:31.668Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p>为了提高蛋白质结构预测算法设计效率，该系统是为开发人员提供了一套预测算法的流程控制和状态监控管理的工具。系统主要功能包括：</p><ol><li>用户的注册和登录功能</li><li>任务创建、任务的执行、任务的撤销和删除</li><li>任务状态的实时监控和过程流的跟踪</li><li>数据的统计与分析</li><li>蛋白质三维可视化图形的显示等</li></ol><h2 id="技术框架"><a href="#技术框架" class="headerlink" title="技术框架"></a>技术框架</h2><p>整个系统前端是基于vue2.0框架搭建而成，通过node.js+Express框架搭建的后端。前端主要使用的框架有：</p><ol><li>UI框架iView</li><li>数据图表绘制框架HighCharts</li><li>基于promise的http请求库axios</li><li>强大的css的扩展语言库Sass</li></ol><p>开发主要通过优雅降级的模式来进行开发，兼容现在市面上主流的浏览器和版本即可，对于其它相对低版本浏览器进行后期的测试和修复，对于版本过低的浏览器我们不做考虑。<br>开发遵循HTML5语义化，使用IE盒子模型进行相关界面的开发与实现</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"></div> ]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;闲言&quot;&gt;&lt;a href=&quot;#闲言&quot; class=&quot;headerlink&quot; title=&quot;闲言&quot;&gt;&lt;/a&gt;闲言&lt;/h2&gt;&lt;p&gt;为了提高蛋白质结构预测算法设计效率，该系统是为开发人员提供了一套预测算法的流程控制和状态监控管理的工具。系统主要功能包括：&lt;/p&gt;
-&lt;ol&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>WebSocket心跳检测和断线重连方法</title>
@@ -451,6 +429,27 @@
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Angular, Vue, React数据双向绑定原理</title>
+    <link href="http://yoursite.com/post/3623552453.html"/>
+    <id>http://yoursite.com/post/3623552453.html</id>
+    <published>2019-01-09T11:35:59.000Z</published>
+    <updated>2019-01-14T12:59:07.394Z</updated>
+    
+    <content type="html"><![CDATA[<div class="note default"><p><a href="https://www.jianshu.com/p/0520e1e8d23d" target="_blank" rel="noopener">angular,vue,react数据双向绑定原理分析</a><br><a href="https://www.cnblogs.com/samsara-yx/p/9456638.html" target="_blank" rel="noopener">angular 双向数据绑定与vue数据的双向数据绑定</a></p></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div class=&quot;note default&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/0520e1e8d23d&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;angular,vue,react数据双向绑定原理分析&lt;/a&gt;
+      
+    
+    </summary>
     
     
   </entry>
