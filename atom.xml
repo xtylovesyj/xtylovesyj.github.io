@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-20T13:58:48.155Z</updated>
+  <updated>2019-02-21T13:15:24.088Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Angular4的后台系统开发</title>
+    <link href="http://yoursite.com/post/1289655291.html"/>
+    <id>http://yoursite.com/post/1289655291.html</id>
+    <published>2019-02-21T05:38:56.000Z</published>
+    <updated>2019-02-21T13:15:24.088Z</updated>
+    
+    <content type="html"><![CDATA[<p>基于Angular4搭建的一个中型的后台管理系统，整个项目的搭建使用的是Angular4脚手架搭建而成，Angular4脚手架是基于webpack进行封装的一个工具，可用于初始化、开发、构建和维护 Angular 应用，它可以帮助我们：</p><ol><li>自动快速创建整个项目架构</li><li>自动生成模块、组件、指令、服务和管道等文件</li><li>项目开发的热重载、sourcemap调试以及进行单元测试</li><li>部署文件的hash、公共文件的提取、文件合并打包压缩等</li></ol><p>本项目前端通过优雅降级的模式来进行开发，先构建站点的完整功能，然后针对浏览器测试和修复，比如一开始使用 CSS3 的特性构建了一个应用，然后逐步针对各大浏览器进行 hack 使其可以在低版本浏览器上正常浏览。但是最主要兼容目前市面上主流的浏览器比如IE9以上、chrome48以上、FireFox44以上、Opera56、Safari11.1等，对于版本过低的浏览器我们通过三个方面来解决兼容性问题：</p><ol><li>html部分通过IE的条件注释来引入html5shiv.js第三方库来让其支持H5新标签特性，如果有条件也可以自己通过createElement来创建新标签，通过css和js来给该标签赋予新特性。</li><li>首先为了针对不同浏览器和版本实现相同的样式，我们必须借助于css hack的方法(IE条件注释、CSS属性前缀、选择器前缀)来实现对应的css样式，从而达到相同的表现形式；其次主要知道浏览器针对每个元素的内补和外补的不同，从而进行初始化、需要选择什么样的盒子模型、针对IE6的浮动双边距问题、设置小于10px高度的元素失败、超链接书写顺序(:link)love hate</li><li>针对js，首先针对低版本浏览器通过引入polyfills第三方库来增加ES6中的方法和属性；其次主要针对IE浏览器中事件绑定、事件获取目标元素、获取ajax以及事件的捕获方式进行兼容性考虑。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;基于Angular4搭建的一个中型的后台管理系统，整个项目的搭建使用的是Angular4脚手架搭建而成，Angular4脚手架是基于webpack进行封装的一个工具，可用于初始化、开发、构建和维护 Angular 应用，它可以帮助我们：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自动快速创
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>WebSocket心跳检测和断线重连方法</title>
@@ -429,27 +452,6 @@
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Angular, Vue, React数据双向绑定原理</title>
-    <link href="http://yoursite.com/post/3623552453.html"/>
-    <id>http://yoursite.com/post/3623552453.html</id>
-    <published>2019-01-09T11:35:59.000Z</published>
-    <updated>2019-01-14T12:59:07.394Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note default"><p><a href="https://www.jianshu.com/p/0520e1e8d23d" target="_blank" rel="noopener">angular,vue,react数据双向绑定原理分析</a><br><a href="https://www.cnblogs.com/samsara-yx/p/9456638.html" target="_blank" rel="noopener">angular 双向数据绑定与vue数据的双向数据绑定</a></p></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;div class=&quot;note default&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/0520e1e8d23d&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;angular,vue,react数据双向绑定原理分析&lt;/a&gt;
-      
-    
-    </summary>
     
     
   </entry>
