@@ -474,21 +474,20 @@
   </entry>
   
   <entry>
-    <title>如何使用Http请求头Range实现多线程下载</title>
-    <link href="http://yoursite.com/post/1155738838.html"/>
-    <id>http://yoursite.com/post/1155738838.html</id>
-    <published>2018-12-11T09:39:43.000Z</published>
-    <updated>2019-01-14T12:55:17.504Z</updated>
+    <title>数据可视化项目</title>
+    <link href="http://yoursite.com/post/624146632.html"/>
+    <id>http://yoursite.com/post/624146632.html</id>
+    <published>2018-12-03T11:12:13.000Z</published>
+    <updated>2019-01-14T12:55:17.503Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>参考：<a href="https://www.cnblogs.com/1995hxt/p/5692050.html" target="_blank" rel="noopener">Http请求头Range</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><img src="数据可视化项目/dashboard.PNG" alt="dashobard"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;blockquote&gt;
-&lt;p&gt;参考：&lt;a href=&quot;https://www.cnblogs.com/1995hxt/p/5692050.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Http请求头Range&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote
+        &lt;p&gt;&lt;img src=&quot;数据可视化项目/dashboard.PNG&quot; alt=&quot;dashobard&quot;&gt;&lt;/p&gt;
+
       
     
     </summary>
@@ -496,11 +495,15 @@
       <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
     
     
-      <category term="多线程下载" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD/"/>
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
-      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+      <category term="d3.js" scheme="http://yoursite.com/tags/d3-js/"/>
     
-      <category term="range" scheme="http://yoursite.com/tags/range/"/>
+      <category term="jquery" scheme="http://yoursite.com/tags/jquery/"/>
+    
+      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+    
+      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
     
   </entry>
   
