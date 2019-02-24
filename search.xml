@@ -17,37 +17,11 @@
     
     
     <entry>
-      <title>D3.js框架使用总结</title>
-      <link href="/post/2361688348.html"/>
-      <url>/post/2361688348.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前玩过Highcharts和Echarts可视化图形框架，绘制几种固定种类的、十分大众化的图表可谓是非常的方便，但是由于它们的封装程度太高了，对于如果希望开发脑海中任意想象到的图表来说就比较麻烦了；然而使用D3.js框架就比较容易了，D3.js 是基于数据操作文档的 JavaScript 库，通过 HTML、SVG 和 CSS 赋予数据以生命。D3 集强力的可视化组件与数据驱动型的 DOM 操作手法于一身，能最大限度地引出现代浏览器的性能，而不必束缚于特定的框架。D3 有一个很独特的功能：可以通过D3选择权器来获取页面中的DOM元素和添加删除DOM元素等，并能将数据绑定到 DOM 上，也就是绑定到文档上，绑定之后，当需要依靠这个数据才操作元素的时候，会很方便。 D3 提供了众多的 SVG 图形的生成器，它们都是只支持 SVG 的。因此，建议使用 SVG 画布。在 SVG 画布的预定义元素里，有六种基本图形：</p><ul><li>矩形</li><li>圆形</li><li>椭圆</li><li>线段</li><li>折线</li><li>多边形</li></ul><p>另外，还有一种比较特殊，也是功能最强的元素：</p><ul><li>路径</li></ul><h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p>布局是 D3 中一个十分重要的概念。D3 与其它很多可视化工具不同，相对来说较底层，对初学者来说不太方便，但是一旦掌握了，就比其他工具更加得心应手。简单的来说布局的作用是：将不适合用于绘图的数据转换成了适合用于绘图的数据。D3 总共提供了 12 个布局分别为：</p><ol><li>饼状图（Pie）</li><li>力导向图（Force）</li><li>弦图（Chord）</li><li>树状图（Tree）</li><li>集群图（Cluster）</li><li>捆图（Bundle）</li><li>打包图（Pack）</li><li>直方图（Histogram）</li><li>分区图（Partition）</li><li>堆栈图（Stack）</li><li>矩阵树图（Treemap）</li><li>层级图（Hierarchy）</li></ol><p>12 个布局中，层级图（Hierarchy）不能直接使用。集群图、打包图、分区图、树状图、矩阵树图是由层级图扩展来的。如此一来，能够使用的布局是 11 个（有 5 个是由层级图扩展而来）。这些布局的作用都是将某种数据转换成另一种数据，而转换后的数据是利于可视化的。</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="http://d3.decembercafe.org/index.html" target="_blank" rel="noopener">Learning D3.js</a><br><a href="https://www.jianshu.com/p/1c22523624f6" target="_blank" rel="noopener">D3.js初体验</a></p></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>webpack4教程</title>
       <link href="/post/1413616213.html"/>
       <url>/post/1413616213.html</url>
       
         <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。webpack是前端目前最主流的javascript打包工具，在它的帮助下，开发者可以轻松地实现加密代码、多平台兼容。而最重要的是，它为前端工程化提供了最好支持。vue、react等大型项目的脚手架都是利用 webpack 搭建。</p><h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><ol><li><a href="https://godbmw.com/passages/2018-07-30-webpack-pack-js/" target="_blank" rel="noopener"><font color="blue">编写<strong>webpack.config.js</strong>，打包基本的js文件</font></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    app: &quot;./app.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    publicPath: __dirname + &quot;/dist/&quot;, // js引用路径或者CDN地址,换句话说就是js文件内部引用其他文件的路径。</span><br><span class="line">    path: path.resolve(__dirname, &quot;dist&quot;), // 打包文件的输出目录</span><br><span class="line">    filename: &quot;bundle.js&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><a href="https://godbmw.com/passages/2018-07-31-webpack-compile-es6/" target="_blank" rel="noopener"><font color="blue">webpack可以编译ES6，通过<strong>babel-loader</strong>把ES6转化成浏览器支持的js文件，通过<strong>babel-polyfill</strong>可以添加浏览器不支持的ES6的方法和函数，比如<code>new Set()</code></font></a> ，启动babel配置如下：<ul><li><strong>.babelrc文件</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    [</span><br><span class="line">      &quot;env&quot;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;targets&quot;: &#123;</span><br><span class="line">          &quot;browsers&quot;: [&quot;last 2 versions&quot;]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [&quot;transform-runtime&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>webpack.config.js配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    app: &quot;./app.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: &quot;bundle.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.js$/,</span><br><span class="line">        exclude: /(node_modules)/,</span><br><span class="line">        use: &#123;</span><br><span class="line">          loader: &quot;babel-loader&quot; </span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li>使用babel-polyfill，它需要在我们项目的入口文件中被引入，或者在webpack.config.js中配置。这里我们采用第一种方法编写app.js:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> import &quot;babel-polyfill&quot;;</span><br><span class="line">let func = () =&gt; &#123;&#125;;</span><br><span class="line">const NUM = 45;</span><br><span class="line">let arr = [1, 2, 4];</span><br><span class="line">let arrB = arr.map(item =&gt; item * 2);</span><br><span class="line"></span><br><span class="line">console.log(arrB.includes(8));</span><br><span class="line">console.log(&quot;new Set(arrB) is &quot;, new Set(arrB));</span><br></pre></td></tr></table></figure></li></ul></li><li><a href="https://godbmw.com/passages/2018-08-06-webpack-mutiple-pages/" target="_blank" rel="noopener"><font color="blue">可以通过<strong>optimization.splitChunks</strong>来提取公共代码。webpack3.0以前提取使用的是CommonsChunkPlugin插件。</font></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  // 多页面应用</span><br><span class="line">  entry: &#123;</span><br><span class="line">    pageA: &quot;./src/pageA.js&quot;,</span><br><span class="line">    pageB: &quot;./src/pageB.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    path: path.resolve(__dirname, &quot;dist&quot;),</span><br><span class="line">    filename: &quot;[name].bundle.js&quot;,</span><br><span class="line">    chunkFilename: &quot;[name].chunk.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  optimization: &#123;</span><br><span class="line">    splitChunks: &#123;</span><br><span class="line">      cacheGroups: &#123;</span><br><span class="line">        // 注意: priority属性</span><br><span class="line">        // 其次: 打包业务中公共代码</span><br><span class="line">        common: &#123;</span><br><span class="line">          name: &quot;common&quot;,</span><br><span class="line">          chunks: &quot;all&quot;,</span><br><span class="line">          minSize: 1,</span><br><span class="line">          priority: 0</span><br><span class="line">        &#125;,</span><br><span class="line">        // 首先: 打包node_modules中的文件</span><br><span class="line">        vendor: &#123;</span><br><span class="line">          name: &quot;vendor&quot;,</span><br><span class="line">          test: /[\\/]node_modules[\\/]/,</span><br><span class="line">          chunks: &quot;all&quot;,</span><br><span class="line">          priority: 10</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><a href="https://godbmw.com/passages/2018-08-08-webpack-spa-split-lazy/" target="_blank" rel="noopener"><font color="blue">通过<strong>import</strong>或者<strong>require.ensure()</strong>实现代码的分割了懒加载</font></a><ul><li>import(): 引入并且自动执行相关 js 代码</li><li>require.ensure(): 引入但需要手动执行相关 js 代码</li></ul></li><li><a href="https://godbmw.com/passages/2018-08-17-webpack-css/" target="_blank" rel="noopener"><font color="blue">通过css-loader、file-loader和style-loader来处理</font></a><ul><li>css-loader: 加载.css文件</li><li>style-loade: 使用<code>&lt;style&gt;</code>将css-loader内部样式注入到我们的HTML页面，我们可以通过style-loader提供的<code>use()</code>和<code>unuse()</code>两种方法来动态加载和卸载css样式；通过style-loader增加<code>options.tranform</code>属性在加载css样式前，更改css.</li><li>url-loader: url-loader可以将图片转为base64字符串，能更快的加载图片,针对小图片</li><li>file-loader: 一旦图片过大，就需要使用file-loader的加载本地图片，故url-loader可以设置图片超过多少字节时，使用file-loader加载图片。</li></ul></li><li><a href="https://godbmw.com/passages/2018-08-18-webpack-scss/" target="_blank" rel="noopener"><font color="blue">通过node-sass、sass-loader加载器来处理scss</font></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.scss$/,</span><br><span class="line">        use: [</span><br><span class="line">          &#123;</span><br><span class="line">            loader: &quot;style-loader&quot; // 将 JS 字符串生成为 style 节点</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            loader: &quot;css-loader&quot; // 将 CSS 转化成 CommonJS 模块</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            loader: &quot;sass-loader&quot; // 将 Sass 编译成 CSS</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li><li><a href="https://godbmw.com/passages/2018-08-28-webpack-scss-lazy/" target="_blank" rel="noopener"><font color="blue">使用extract-text-webpack-plugin插件实现实现 SCSS 懒加载</font></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">   rules: [</span><br><span class="line">     &#123;</span><br><span class="line">       test: /\.scss$/,</span><br><span class="line">       use: ExtractTextPlugin.extract(&#123;</span><br><span class="line">         // 注意 1</span><br><span class="line">         fallback: &#123;</span><br><span class="line">           loader: &quot;style-loader&quot;</span><br><span class="line">         &#125;,</span><br><span class="line">         use: [</span><br><span class="line">           &#123;</span><br><span class="line">             loader: &quot;css-loader&quot;,</span><br><span class="line">             options: &#123;</span><br><span class="line">               minimize: true</span><br><span class="line">             &#125;</span><br><span class="line">           &#125;,</span><br><span class="line">           &#123;</span><br><span class="line">             loader: &quot;sass-loader&quot;</span><br><span class="line">           &#125;</span><br><span class="line">         ]</span><br><span class="line">       &#125;)</span><br><span class="line">     &#125;</span><br><span class="line">   ]</span><br><span class="line"> &#125;,</span><br><span class="line"> plugins: [</span><br><span class="line">   new ExtractTextPlugin(&#123;</span><br><span class="line">     filename: &quot;[name].min.css&quot;,</span><br><span class="line">     allChunks: false // 注意 2</span><br><span class="line">   &#125;)</span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>common.scss为懒加载的文件，此时需要在项目app.js入口中引入<code>style-loader/lib/addStyles</code>和<code>css-loader/lib/css-base</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> /**webpack4: 针对scss的懒加载, 需要以下代码 */</span><br><span class="line">import &quot;style-loader/lib/addStyles&quot;;</span><br><span class="line">import &quot;css-loader/lib/css-base&quot;;</span><br><span class="line">/**************************************** */</span><br><span class="line"></span><br><span class="line">import &quot;./scss/base.scss&quot;;</span><br><span class="line"></span><br><span class="line">var loaded = false;</span><br><span class="line">window.addEventListener(&quot;click&quot;, function() &#123;</span><br><span class="line">  if (!loaded) &#123;</span><br><span class="line">    import(/* webpackChunkName: &apos;style&apos;*/ &quot;./scss/common.scss&quot;).then(_ =&gt; &#123;</span><br><span class="line">      console.log(&quot;Change bg-color of html&quot;);</span><br><span class="line">      loaded = true;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br></pre></td></tr></table></figure>根据我们在app.js中的webpackChunkName的配置，可以猜测，打包结果中有：style.chunk.js 文件</li><li><a href="https://godbmw.com/passages/2018-09-01-js-tree-shaking/" target="_blank" rel="noopener"><font color="blue">使用JS Tree Shaking 在项目中没有使用的代码会在打包时候丢掉。<strong>注意：JS 的 Tree Shaking 依赖的是 ES2015 的模块系统（比如：import和export），因此针对第三方JS库，需要注意他是否符合ES模板系统规范。</strong>使用时不再需要UglifyjsWebpackPlugin插件， 取而代之的是，更加方便的配置方法。只需要配置mode为”production”，即可显式激活 UglifyjsWebpackPlugin 插件。</font></a></li><li><a href="https://godbmw.com/passages/2018-09-02-css-tree-shaking/" target="_blank" rel="noopener"><font color="blue">通过使用PruifyCSS和glob-all第三方库来实现Css Tree Shaking</font></a></li><li><a href="https://godbmw.com/passages/2018-09-11-webpack-image/" target="_blank" rel="noopener"><font color="blue">处理图片和进行base64编码时候使用<strong>url-loader</strong>，压缩图片可以使用<strong>img-loader</strong>，<strong>postcss-loader</strong>和<strong>postcss-sprites</strong>则用来合成雪碧图，从而减少网络请求</font></a></li><li><a href="https://godbmw.com/passages/2018-10-09-webpack-chracter-file/" target="_blank" rel="noopener"><font color="blue">借助url-loader，可以识别并且处理eot、woff等结尾的字体文件。同时，根据字体文件大小，可以灵活配置是否进行base64编码</font></a></li><li><a href="https://godbmw.com/passages/2018-10-09-webpack-js-pacakge/" target="_blank" rel="noopener"><font color="blue">针对第三种方法，如果没有webpack，则需要手动引入import或者require来加载文件；但是，webpack提供了<strong>alias</strong>的配置，配合<strong>webpack.ProvidePlugin</strong>这款插件，可以跳过手动入，直接使用！</font></a></li><li><a href="https://godbmw.com/passages/2018-10-17-automatic-html/" target="_blank" rel="noopener"><font color="blue">通过<strong>html-webpack-plugin</strong>插件来自动生成html</font></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      filename: &quot;index.html&quot;,</span><br><span class="line">      template: &quot;./index.html&quot;,</span><br><span class="line">      chunks: [&quot;app&quot;], // entry中的app入口才会被打包</span><br><span class="line">      minify: &#123;</span><br><span class="line">        // 压缩选项</span><br><span class="line">        collapseWhitespace: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure></li><li><a href="https://godbmw.com/passages/2018-10-18-webpack-clean-and-watch-mode/" target="_blank" rel="noopener"><font color="blue"><strong>CleanWebpackPlugin</strong>，在每次打包前，自动清理/dist/目录下的文件。</font></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    app: &quot;./app.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    publicPath: __dirname + &quot;/dist/&quot;, // js引用路径或者CDN地址</span><br><span class="line">    path: path.resolve(__dirname, &quot;dist&quot;), // 打包文件的输出目录</span><br><span class="line">    filename: &quot;[name]-[hash:5].bundle.js&quot;,</span><br><span class="line">    chunkFilename: &quot;[name]-[hash:5].chunk.js&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    new HtmlWebpackPlugin(&#123;</span><br><span class="line">      filename: &quot;index.html&quot;,</span><br><span class="line">      template: &quot;./index.html&quot;,</span><br><span class="line">      chunks: [&quot;app&quot;]</span><br><span class="line">    &#125;),</span><br><span class="line">    new CleanWebpackPlugin([&quot;dist&quot;])</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li><li><a href="https://godbmw.com/passages/2018-10-18-webpack-clean-and-watch-mode/" target="_blank" rel="noopener"><font color="blue">webpack-dev-server插件可以启动一个本地服务，可以进行热重载、路由重定向、挂代理等功能和sourcemap帮助开发进行代码调试</font></a></li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/geyouneihan/p/9827295.html" target="_blank" rel="noopener">全网最贴心webpack系列教程和配套代码</a><br><a href="https://www.cnblogs.com/axl234/p/6500534.html" target="_blank" rel="noopener">Webpack中的sourcemap</a></p></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>如何注意前端浏览器兼容性问题</title>
-      <link href="/post/1118069504.html"/>
-      <url>/post/1118069504.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"></div> ]]></content>
       
       
       
@@ -69,50 +43,11 @@
     
     
     <entry>
-      <title>HTTP2专题一</title>
-      <link href="/post/3511927546.html"/>
-      <url>/post/3511927546.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="HTTP-1-1存在的问题"><a href="#HTTP-1-1存在的问题" class="headerlink" title="HTTP/1.1存在的问题"></a>HTTP/1.1存在的问题</h2><ol><li>TCP 连接数限制</li><li>线头阻塞 (Head Of Line Blocking) 问题</li><li>Header 内容多，而且每次请求 Header 不会变化太多，没有相应的压缩传输优化方案</li><li>为了尽可能减少请求数，需要做合并文件、雪碧图、资源内联等优化工作，但是这无疑造成了单个请求内容变大延迟变高的问题，且内嵌的资源不能有效地使用缓存机制</li><li>明文传输不安全</li></ol><h2 id="HTTP2的优势"><a href="#HTTP2的优势" class="headerlink" title="HTTP2的优势"></a>HTTP2的优势</h2><ol><li>二进制分帧层 (Binary Framing Layer)</li><li>多路复用 (MultiPlexing)</li><li>服务端推送 (Server Push)</li><li>Header 压缩 (HPACK)</li><li>应用层的重置连接</li><li>请求优先级设置</li><li>流量控制</li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.jianshu.com/p/e57ca4fec26f" target="_blank" rel="noopener">HTTP2 详解</a></p></div> ]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ES6新特性列举</title>
       <link href="/post/2244272007.html"/>
       <url>/post/2244272007.html</url>
       
         <content type="html"><![CDATA[<h2 id="块作用域const和let变量"><a href="#块作用域const和let变量" class="headerlink" title="块作用域const和let变量"></a>块作用域const和let变量</h2><h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><h2 id="变量的结构赋值"><a href="#变量的结构赋值" class="headerlink" title="变量的结构赋值"></a>变量的结构赋值</h2><h2 id="模板字符串-variate"><a href="#模板字符串-variate" class="headerlink" title="模板字符串${variate}"></a>模板字符串<code>${variate}</code></h2><h2 id="对象字面量的简写"><a href="#对象字面量的简写" class="headerlink" title="对象字面量的简写"></a>对象字面量的简写</h2><h2 id="Generator函数"><a href="#Generator函数" class="headerlink" title="Generator函数"></a>Generator函数</h2><h2 id="async函数"><a href="#async函数" class="headerlink" title="async函数"></a>async函数</h2><h2 id="Set和Map数据结构"><a href="#Set和Map数据结构" class="headerlink" title="Set和Map数据结构"></a>Set和Map数据结构</h2><h2 id="Reflect"><a href="#Reflect" class="headerlink" title="Reflect"></a>Reflect</h2><h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><h2 id="模块Modules"><a href="#模块Modules" class="headerlink" title="模块Modules"></a>模块Modules</h2>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Web Worker基础教程</title>
-      <link href="/post/1337014625.html"/>
-      <url>/post/1337014625.html</url>
-      
-        <content type="html"><![CDATA[<div class="note default"><p><a href="http://www.ruanyifeng.com/blog/2018/07/web-worker.html" target="_blank" rel="noopener">Web Worker 使用教程</a></p></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>js加载方式defer和async的区别与作用</title>
-      <link href="/post/3350320627.html"/>
-      <url>/post/3350320627.html</url>
-      
-        <content type="html"><![CDATA[<div class="note default"><p><a href="https://segmentfault.com/q/1010000000640869" target="_blank" rel="noopener">defer和async的区别</a></p></div>]]></content>
       
       
       
@@ -140,19 +75,6 @@
     
     
     <entry>
-      <title>html页面渲染过程详解</title>
-      <link href="/post/3918118019.html"/>
-      <url>/post/3918118019.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/dojo-lzz/p/3983335.html" target="_blank" rel="noopener">HTML渲染过程详解</a><br><a href="https://www.cnblogs.com/chenjg/p/10099886.html" target="_blank" rel="noopener">你真的了解回流和重绘吗</a><br><a href="https://juejin.im/post/59d489156fb9a00a571d6509" target="_blank" rel="noopener">浏览器渲染过程与性能优化</a><br><a href="https://blog.csdn.net/cristina_song/article/details/77512534" target="_blank" rel="noopener">js执行会阻塞DOM树的解析和渲染，那么css加载会阻塞DOM树的解析和渲染吗</a></p></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ES6的Rest参数和对象展开运算符</title>
       <link href="/post/3368437986.html"/>
       <url>/post/3368437986.html</url>
@@ -171,19 +93,6 @@
       <url>/post/2276870894.html</url>
       
         <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><p>通过css可以实现不同样式的三角形，其中的原理可以了解一下<a href="http://www.cnblogs.com/cchyao/archive/2010/07/12/1775846.html" target="_blank" rel="noopener">盒子模型</a>，闲言少叙，直接开始吧！</p><h2 id="基本入门"><a href="#基本入门" class="headerlink" title="基本入门"></a>基本入门</h2><p>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;</span><br><span class="line">    &lt;title&gt;Static Template&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 100px 100px 100px 100px;</span><br><span class="line">            border-color: red yellow green gray;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            width: 50px;</span><br><span class="line">            height: 50px;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;angel&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><br>效果图如下：<br><img src="/post/2276870894/1.png"><br>代码17行作用是使用标准的盒子模型，如果使用IE盒子模型（box-sizing：border-box;），就不会出现中间的空白方块，大家可以自行测试。当我们调整width和height为5px，效果图如下：<br><img src="/post/2276870894/2.png"><br>当width和height为0时，效果图如下<br><img src="/post/2276870894/3.png"><br>感觉像不像四个三角形拼接在一起，如果我们想要绿色的三角形，我们可以把其它三个边框的颜色设置成transparent,代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 100px 100px 100px 100px;</span><br><span class="line">            border-color: transparent transparent green transparent;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><br>效果图如下：<br><img src="/post/2276870894/4.png"><br>但是其它边的颜色已经透明，但是所占区域还是存在的，我们可以审查一下元素，如图所示：<br><img src="/post/2276870894/5.png"><br>因此我们把上边框的border-width设置为0，得到下图：<br><img src="/post/2276870894/6.png"><br>是不是我们想要达到的效果。我们也可以设置左边或者右边的border为0，得到该三角形其中的一半（也是一个三角形），代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 0 100px 100px 0;</span><br><span class="line">            border-color: transparent transparent green transparent;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><br>效果图如下：<br><img src="/post/2276870894/7.png"><br>因此通过调整border不同方向的width和color，我们就可以得到任意不同方向的三角形。</p><h2 id="实战练习"><a href="#实战练习" class="headerlink" title="实战练习"></a>实战练习</h2><h3 id="1-实现一个角度为30度的直角三角形"><a href="#1-实现一个角度为30度的直角三角形" class="headerlink" title="1. 实现一个角度为30度的直角三角形"></a>1. 实现一个角度为30度的直角三角形</h3><p>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.angel &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            border-width: 0px 100px 173px 0px;</span><br><span class="line">            border-color: transparent transparent green transparent;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            box-sizing: content-box;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure><br>如图所示：<br><img src="/post/2276870894/8.png"></p><h3 id="2-实现一个带有边框的三角形"><a href="#2-实现一个带有边框的三角形" class="headerlink" title="2. 实现一个带有边框的三角形"></a>2. 实现一个带有边框的三角形</h3><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="http://www.cnblogs.com/v-weiwang/p/5057588.html" target="_blank" rel="noopener">css如何将div画成三角形</a></p></div> ]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Angualr介绍</title>
-      <link href="/post/2552726188.html"/>
-      <url>/post/2552726188.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><ol><li>编译的时候可以代码检查bug，从而减少运行时的bug</li><li>IDE更好的代码提示，和更快的性能</li><li>angular核心就是组件，装饰器模式</li><li>angular组件非常容易编写，装饰器模式更加人性化</li><li>服务器端渲染，可以增强性能也可以提高seo优化</li><li></li></ol><h2 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular CLI"></a>Angular CLI</h2><h2 id="与React对比"><a href="#与React对比" class="headerlink" title="与React对比"></a>与React对比</h2><ol><li>React虚拟dom，先更新虚拟dom，在更新实际dom</li><li>Angular 新的变更检测算法</li><li>Angular 服务器端渲染，服务器预渲染首页加载优化，是seo引擎优化</li><li>单页缺陷是对seo很大缺陷</li></ol><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>不是完整的框架，第三方组件没有Angualr多</p><h2 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h2><p>简单<br>学习和使用不高，中文文档<br>cli更灵活<br>尺寸小，十几k<br>个人主导的，但是angular是google开发的，用的还是微软的typeScript<br>只关注web框架</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"></div> ]]></content>
       
       
       
@@ -223,48 +132,6 @@
     
     
     <entry>
-      <title>详解http请求头host</title>
-      <link href="/post/3695960831.html"/>
-      <url>/post/3695960831.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> http </tag>
-            
-            <tag> header </tag>
-            
-            <tag> host </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>http header详解</title>
-      <link href="/post/956247918.html"/>
-      <url>/post/956247918.html</url>
-      
-        <content type="html"><![CDATA[<div class="note class_name"><p><a href="https://segmentfault.com/a/1190000008900299" target="_blank" rel="noopener">HTTP 最强资料大全</a><br><a href="http://www.cnblogs.com/Joans/p/3956490.html" target="_blank" rel="noopener">HTTP Header 详解</a></p></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>http状态码详解</title>
       <link href="/post/432560822.html"/>
       <url>/post/432560822.html</url>
@@ -290,19 +157,6 @@
           <category> javascript </category>
           
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Angular, Vue, React数据双向绑定原理</title>
-      <link href="/post/3623552453.html"/>
-      <url>/post/3623552453.html</url>
-      
-        <content type="html"><![CDATA[<div class="note default"><p><a href="https://www.jianshu.com/p/0520e1e8d23d" target="_blank" rel="noopener">angular,vue,react数据双向绑定原理分析</a><br><a href="https://www.cnblogs.com/samsara-yx/p/9456638.html" target="_blank" rel="noopener">angular 双向数据绑定与vue数据的双向数据绑定</a></p></div>]]></content>
-      
       
       
     </entry>
@@ -479,227 +333,6 @@
     
     
     <entry>
-      <title>It&#39;s Nap Time</title>
-      <link href="/post/400497674.html"/>
-      <url>/post/400497674.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Mr-Mishima-a-Japanese-tourist-enters-a-bank-in-Milan-Italy-M-Mishima-T-bank-teller"><a href="#Mr-Mishima-a-Japanese-tourist-enters-a-bank-in-Milan-Italy-M-Mishima-T-bank-teller" class="headerlink" title="Mr. Mishima, a Japanese tourist, enters a bank in Milan, Italy.(M=Mishima; T=bank teller)"></a>Mr. Mishima, a Japanese tourist, enters a bank in Milan, Italy.(M=Mishima; T=bank teller)</h2><h2 id="M-Uh-excuse-me…"><a href="#M-Uh-excuse-me…" class="headerlink" title="M: Uh, excuse me…"></a>M: Uh, excuse me…</h2><h2 id="T-Zzzzzz…"><a href="#T-Zzzzzz…" class="headerlink" title="T: Zzzzzz…"></a>T: Zzzzzz…</h2><h2 id="M-EXCUSE-ME"><a href="#M-EXCUSE-ME" class="headerlink" title="M: EXCUSE ME!"></a>M: EXCUSE ME!</h2><h2 id="T-Aggghhh-What-do-you-want-You-scared-the-lift-out-of-time"><a href="#T-Aggghhh-What-do-you-want-You-scared-the-lift-out-of-time" class="headerlink" title="T: Aggghhh! What do you want? You scared the lift out of time!"></a>T: Aggghhh! What do you want? You scared the lift out of time!</h2><h2 id="M-I’d-like-to-cash-a-traveler’s-check-please"><a href="#M-I’d-like-to-cash-a-traveler’s-check-please" class="headerlink" title="M: I’d like to cash a traveler’s check, please."></a>M: I’d like to cash a traveler’s check, please.</h2><h2 id="T-At-this-hour-You-must-be-kidding"><a href="#T-At-this-hour-You-must-be-kidding" class="headerlink" title="T: At this hour? You must be kidding!"></a>T: At this hour? You must be kidding!</h2><h2 id="M-But-it’s-two-in-the-afternoon"><a href="#M-But-it’s-two-in-the-afternoon" class="headerlink" title="M: But it’s two in the afternoon."></a>M: But it’s two in the afternoon.</h2><h2 id="T-That’s-right-and-as-usual-it’s-nap-time-Come-back-at-three-or-four-We-don’t-work-the-same-hours-as-you-do-in-your-country"><a href="#T-That’s-right-and-as-usual-it’s-nap-time-Come-back-at-three-or-four-We-don’t-work-the-same-hours-as-you-do-in-your-country" class="headerlink" title="T: That’s right - and as usual, it’s nap time. Come back at three or four. We don’t work the same hours as you do in your country."></a>T: That’s right - and as usual, it’s nap time. Come back at three or four. We don’t work the same hours as you do in your country.</h2><h2 id="M-But-I-have-to-cash-this-check-I-have-no-cash"><a href="#M-But-I-have-to-cash-this-check-I-have-no-cash" class="headerlink" title="M: But I have to cash this check. I have no cash!"></a>M: But I have to cash this check. I have no cash!</h2><h2 id="D-Don’t-worry-You-won’t-need-any-cash-All-of-Italy-is-asleep-at-the-moment-Zzzzzz…"><a href="#D-Don’t-worry-You-won’t-need-any-cash-All-of-Italy-is-asleep-at-the-moment-Zzzzzz…" class="headerlink" title="D: Don’t worry. You won’t need any cash. All of Italy is asleep at the moment. Zzzzzz….."></a>D: Don’t worry. You won’t need any cash. All of Italy is asleep at the moment. Zzzzzz…..</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Italian Culture</title>
-      <link href="/post/4206359651.html"/>
-      <url>/post/4206359651.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-Italy-is-land-of-history-and-culture-And-as-we-all-know-the-ancient-architecture-there-is-breathtaking-Just-as-we-Chinese-are-proud-of-our-history-and-culture-so-are-the-Italians-One-of-their-traditions-is-to-enjoy-a-long-modday-meal-This-lengthy-lunch-can-last-up-to-four-hours-As-you-can-imagine-after-all-the-eating-drinking-and-chatting-they-need-to-take-a-nap"><a href="#nbsp-nbsp-nbsp-nbsp-Italy-is-land-of-history-and-culture-And-as-we-all-know-the-ancient-architecture-there-is-breathtaking-Just-as-we-Chinese-are-proud-of-our-history-and-culture-so-are-the-Italians-One-of-their-traditions-is-to-enjoy-a-long-modday-meal-This-lengthy-lunch-can-last-up-to-four-hours-As-you-can-imagine-after-all-the-eating-drinking-and-chatting-they-need-to-take-a-nap" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Italy is land of history and culture. And as we all know, the ancient architecture there is breathtaking. Just as we Chinese are proud of our history and culture, so are the Italians. One of their traditions is to enjoy a long modday meal. This lengthy lunch can last up to four hours! As you can imagine, after all the eating, drinking and chatting, they need to take a nap."></a>&nbsp;&nbsp;&nbsp;&nbsp;Italy is land of history and culture. And as we all know, the ancient architecture there is breathtaking. Just as we Chinese are proud of our history and culture, so are the Italians. One of their traditions is to enjoy a long modday meal. This lengthy lunch can last up to four hours! As you can imagine, after all the eating, drinking and chatting, they need to take a nap.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-Well-this-custom-may-be-great-for-the-stomach-but-it’s-not-so-great-for-getting-things-done-If-you-happen-to-be-in-Italy-don’t-be-surprised-if-you-have-to-wait-for-a-long-time-for-the-banks-and-post-offices-to-open"><a href="#nbsp-nbsp-nbsp-nbsp-Well-this-custom-may-be-great-for-the-stomach-but-it’s-not-so-great-for-getting-things-done-If-you-happen-to-be-in-Italy-don’t-be-surprised-if-you-have-to-wait-for-a-long-time-for-the-banks-and-post-offices-to-open" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Well, this custom may be great for the stomach, but it’s not so great for getting things done. If you happen to be in Italy, don’t be surprised if you have to wait for a long time for the banks and post offices to open."></a>&nbsp;&nbsp;&nbsp;&nbsp;Well, this custom may be great for the stomach, but it’s not so great for getting things done. If you happen to be in Italy, don’t be surprised if you have to wait for a long time for the banks and post offices to open.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Speaking the Same Language</title>
-      <link href="/post/499453591.html"/>
-      <url>/post/499453591.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Sally-is-talking-with-her-friend-Don-S-Sally-D-Don"><a href="#Sally-is-talking-with-her-friend-Don-S-Sally-D-Don" class="headerlink" title="Sally is talking with her friend, Don.(S=Sally; D=Don)"></a>Sally is talking with her friend, Don.(S=Sally; D=Don)</h2><h2 id="S-Tell-me-Don-How-come-you’re-from-Spain-but-you-can’t-speak-Spanish-very-well"><a href="#S-Tell-me-Don-How-come-you’re-from-Spain-but-you-can’t-speak-Spanish-very-well" class="headerlink" title="S: Tell me, Don. How come you’re from Spain but you can’t speak Spanish very well?"></a>S: Tell me, Don. How come you’re from Spain but you can’t speak Spanish very well?</h2><h2 id="D-It’s-not-my-mother-tongue-My-father-is-Spanish-and-my-mother-is-American-We-usually-speak-English-at-home"><a href="#D-It’s-not-my-mother-tongue-My-father-is-Spanish-and-my-mother-is-American-We-usually-speak-English-at-home" class="headerlink" title="D: It’s not my mother tongue. My father is Spanish and my mother is American. We usually speak English at home."></a>D: It’s not my mother tongue. My father is Spanish and my mother is American. We usually speak English at home.</h2><h2 id="S-Oh-I-see"><a href="#S-Oh-I-see" class="headerlink" title="S: Oh, I see."></a>S: Oh, I see.</h2><h2 id="D-Your-Spanish-is-probably-better-than-mine"><a href="#D-Your-Spanish-is-probably-better-than-mine" class="headerlink" title="D: Your Spanish is probably better than mine."></a>D: Your Spanish is probably better than mine.</h2><h2 id="S-Yes-but-you-speak-English-more-fluently-than-I"><a href="#S-Yes-but-you-speak-English-more-fluently-than-I" class="headerlink" title="S: Yes, but you speak English more fluently than I."></a>S: Yes, but you speak English more fluently than I.</h2><h2 id="D-How-come-Aren’t-you-American"><a href="#D-How-come-Aren’t-you-American" class="headerlink" title="D: How come? Aren’t you American?"></a>D: How come? Aren’t you American?</h2><h2 id="S-Yes-but-my-mother-is-Spanish"><a href="#S-Yes-but-my-mother-is-Spanish" class="headerlink" title="S: Yes, but my mother is Spanish."></a>S: Yes, but my mother is Spanish.</h2><h2 id="D-Don’t-tell-me…"><a href="#D-Don’t-tell-me…" class="headerlink" title="D: Don’t tell me…"></a>D: Don’t tell me…</h2><h2 id="S-That’s-right-We-usually-speak-Spanish-at-home"><a href="#S-That’s-right-We-usually-speak-Spanish-at-home" class="headerlink" title="S: That’s right. We usually speak Spanish at home."></a>S: That’s right. We usually speak Spanish at home.</h2><h2 id="D-It-doesn’t-matter-as-long-as-we-can-communicate"><a href="#D-It-doesn’t-matter-as-long-as-we-can-communicate" class="headerlink" title="D: It doesn’t matter as long as we can communicate."></a>D: It doesn’t matter as long as we can communicate.</h2><h2 id="S-That’s-true"><a href="#S-That’s-true" class="headerlink" title="S: That’s true."></a>S: That’s true.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note success"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> English </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>The Dying Languages</title>
-      <link href="/post/3018116520.html"/>
-      <url>/post/3018116520.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-Today-more-people-than-ever-before-are-speaking-to-each-other-through-satellite-television-cellular-telephones-and-computers-This-means-that-people-from-different-parts-of-the-world-need-to-be-able-to-communicate-in-the-same-langulage-That-language-happens-to-be-English"><a href="#nbsp-nbsp-nbsp-nbsp-Today-more-people-than-ever-before-are-speaking-to-each-other-through-satellite-television-cellular-telephones-and-computers-This-means-that-people-from-different-parts-of-the-world-need-to-be-able-to-communicate-in-the-same-langulage-That-language-happens-to-be-English" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Today, more people than ever before are speaking to each other through satellite television, cellular telephones and computers. This means that people from different parts of the world need to be able to communicate in the same langulage. That language happens to be English."></a>&nbsp;&nbsp;&nbsp;&nbsp;Today, more people than ever before are speaking to each other through satellite television, cellular telephones and computers. This means that people from different parts of the world need to be able to communicate in the same langulage. That language happens to be English.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-Because-of-this-experts-have-predicted-that-more-than-half-of-the-world’s-6-000-languages-may-die-out-in-the-next-century-Already-almost-all-Californian-Native-American-languages-are-in-danger-of-extinction-They-are-being-swallowed-up-by-English-and-other-languages-It-is-a-pity-but-that-is-one-of-the-prices-of-modernization"><a href="#nbsp-nbsp-nbsp-nbsp-Because-of-this-experts-have-predicted-that-more-than-half-of-the-world’s-6-000-languages-may-die-out-in-the-next-century-Already-almost-all-Californian-Native-American-languages-are-in-danger-of-extinction-They-are-being-swallowed-up-by-English-and-other-languages-It-is-a-pity-but-that-is-one-of-the-prices-of-modernization" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Because of this, experts have predicted that more than half of the world’s 6,000 languages may die out in the next century. Already almost all Californian Native American languages are in danger of extinction. They are being swallowed up by English and other languages. It is a pity, but that is one of the prices of modernization."></a>&nbsp;&nbsp;&nbsp;&nbsp;Because of this, experts have predicted that more than half of the world’s 6,000 languages may die out in the next century. Already almost all Californian Native American languages are in danger of extinction. They are being swallowed up by English and other languages. It is a pity, but that is one of the prices of modernization.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note success"><p>赖世雄美语从头学-中级篇（上）</p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> English </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>The City of Song</title>
-      <link href="/post/551383592.html"/>
-      <url>/post/551383592.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-Listening-to-music-is-the-favorite-pastime-of-many-people-all-over-the-world-This-is-escpecially-true-for-people-living-in-Vienna-the-city-of-song-Being-the-home-of-Mozart-this-city-is-the-birthplace-of-classical-music-and-the-waltz"><a href="#nbsp-nbsp-nbsp-nbsp-Listening-to-music-is-the-favorite-pastime-of-many-people-all-over-the-world-This-is-escpecially-true-for-people-living-in-Vienna-the-city-of-song-Being-the-home-of-Mozart-this-city-is-the-birthplace-of-classical-music-and-the-waltz" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Listening to music is the favorite pastime of many people all over the world. This is escpecially true for people living in Vienna, the city of song. Being the home of Mozart, this city is the birthplace of classical music and the waltz."></a>&nbsp;&nbsp;&nbsp;&nbsp;Listening to music is the favorite pastime of many people all over the world. This is escpecially true for people living in Vienna, the city of song. Being the home of Mozart, this city is the birthplace of classical music and the waltz.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-Music-fills-the-air-in-Vienna-Going-to-public-concerts-is-often-free-of-charge-And-don’t-forget-Vienna-is-also-home-to-the-world-famous-Vienna-Boys’-Choir-No-wonder-people-say-Austria-is-always-alive-with-the-sound-of-music"><a href="#nbsp-nbsp-nbsp-nbsp-Music-fills-the-air-in-Vienna-Going-to-public-concerts-is-often-free-of-charge-And-don’t-forget-Vienna-is-also-home-to-the-world-famous-Vienna-Boys’-Choir-No-wonder-people-say-Austria-is-always-alive-with-the-sound-of-music" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Music fills the air in Vienna. Going to public concerts is often free of charge. And don’t forget, Vienna is also home to the world famous Vienna Boys’ Choir. No wonder people say Austria is always alive with the sound of music."></a>&nbsp;&nbsp;&nbsp;&nbsp;Music fills the air in Vienna. Going to public concerts is often free of charge. And don’t forget, Vienna is also home to the world famous Vienna Boys’ Choir. No wonder people say Austria is always alive with the sound of music.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note success"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>How to improve Your English</title>
-      <link href="/post/565400138.html"/>
-      <url>/post/565400138.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Mack-is-talking-to-his-frient-Don-M-Mack-D-Don"><a href="#Mack-is-talking-to-his-frient-Don-M-Mack-D-Don" class="headerlink" title="Mack is talking to his frient Don.(M=Mack, D=Don)"></a>Mack is talking to his frient Don.(M=Mack, D=Don)</h2><h2 id="M-Hi-Don-How-are-you-doing-in-your-English-class"><a href="#M-Hi-Don-How-are-you-doing-in-your-English-class" class="headerlink" title="M: Hi, Don! How are you doing in your English class?"></a>M: Hi, Don! How are you doing in your English class?</h2><h2 id="D-Not-so-well-I’m-afraid"><a href="#D-Not-so-well-I’m-afraid" class="headerlink" title="D: Not so well, I’m afraid."></a>D: Not so well, I’m afraid.</h2><h2 id="M-What’s-the-problem"><a href="#M-What’s-the-problem" class="headerlink" title="M: What’s the problem?"></a>M: What’s the problem?</h2><h2 id="D-I’m-not-imporving-Tell-me-how-come-your-English-is-so-good"><a href="#D-I’m-not-imporving-Tell-me-how-come-your-English-is-so-good" class="headerlink" title="D: I’m not imporving. Tell me, how come your English is so good?"></a>D: I’m not imporving. Tell me, how come your English is so good?</h2><h2 id="M-Well-uh…I-have-an-American-girlfriend"><a href="#M-Well-uh…I-have-an-American-girlfriend" class="headerlink" title="M: Well, uh…I have an American girlfriend."></a>M: Well, uh…I have an American girlfriend.</h2><h2 id="D-Aha-That’s-it-Now-I-know-what-to-do-He-runs-off"><a href="#D-Aha-That’s-it-Now-I-know-what-to-do-He-runs-off" class="headerlink" title="D: Aha! That’s it. Now I know what to do.(He runs off.)"></a>D: Aha! That’s it. Now I know what to do.(He runs off.)</h2><h2 id="M-Hey-come-back-I-was-just-kidding"><a href="#M-Hey-come-back-I-was-just-kidding" class="headerlink" title="M: Hey, come back! I was just kidding!"></a>M: Hey, come back! I was just kidding!</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Rome Wasn&#39;t Built in a Day</title>
-      <link href="/post/1605819299.html"/>
-      <url>/post/1605819299.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-English-is-an-international-language-Therefore-it-is-necessary-for-us-to-learn-it-It-can-be-rewarding-or-just-a-waste-of-time-It’s-up-to-you-It-depends-on-how-you-study-it-Here-are-some-tips-about-learning-English"><a href="#nbsp-nbsp-nbsp-nbsp-English-is-an-international-language-Therefore-it-is-necessary-for-us-to-learn-it-It-can-be-rewarding-or-just-a-waste-of-time-It’s-up-to-you-It-depends-on-how-you-study-it-Here-are-some-tips-about-learning-English" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;English is an international language. Therefore, it is necessary for us to learn it. It can be rewarding or just a waste of time. It’s up to you. It depends on how you study it. Here are some tips about learning English."></a>&nbsp;&nbsp;&nbsp;&nbsp;English is an international language. Therefore, it is necessary for us to learn it. It can be rewarding or just a waste of time. It’s up to you. It depends on how you study it. Here are some tips about learning English.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-First-don’t-be-afraid-to-make-mistakes-You-will-learn-form-them-Second-you-must-not-be-shy-Be-thick-skinned-and-speak-up"><a href="#nbsp-nbsp-nbsp-nbsp-First-don’t-be-afraid-to-make-mistakes-You-will-learn-form-them-Second-you-must-not-be-shy-Be-thick-skinned-and-speak-up" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;First, don’t be afraid to make mistakes. You will learn form them. Second, you must not be shy. Be thick-skinned and speak up!"></a>&nbsp;&nbsp;&nbsp;&nbsp;First, don’t be afraid to make mistakes. You will learn form them. Second, you must not be shy. Be thick-skinned and speak up!</h2><h2 id="nbsp-nbsp-nbsp-nbsp-Finally-you-must-be-patient-Remember-“Rome-wasn’t-built-in-a-day-”"><a href="#nbsp-nbsp-nbsp-nbsp-Finally-you-must-be-patient-Remember-“Rome-wasn’t-built-in-a-day-”" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;Finally, you must be patient. Remember, “Rome wasn’t built in a day.”"></a>&nbsp;&nbsp;&nbsp;&nbsp;Finally, you must be patient. Remember, “Rome wasn’t built in a day.”</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Keep the Change</title>
-      <link href="/post/3275658214.html"/>
-      <url>/post/3275658214.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Jimmy-is-at-the-Boston-Airport-He-hails-a-taxi-T-taxi-driver-J-Jimmy"><a href="#Jimmy-is-at-the-Boston-Airport-He-hails-a-taxi-T-taxi-driver-J-Jimmy" class="headerlink" title="Jimmy is at the Boston Airport. He hails a taxi.(T=taxi driver; J=Jimmy)"></a>Jimmy is at the Boston Airport. He hails a taxi.(T=taxi driver; J=Jimmy)</h2><h2 id="T-Where-to-buddy"><a href="#T-Where-to-buddy" class="headerlink" title="T: Where to, buddy?"></a>T: Where to, buddy?</h2><h2 id="J-The-Sheraton-Hotel-please"><a href="#J-The-Sheraton-Hotel-please" class="headerlink" title="J: The Sheraton Hotel, please."></a>J: The Sheraton Hotel, please.</h2><h2 id="T-Ok-Is-this-your-first-time-in-Boston"><a href="#T-Ok-Is-this-your-first-time-in-Boston" class="headerlink" title="T: Ok. Is this your first time in Boston?"></a>T: Ok. Is this your first time in Boston?</h2><h2 id="J-Yes-What’s-a-good-place-for-sightseeing"><a href="#J-Yes-What’s-a-good-place-for-sightseeing" class="headerlink" title="J: Yes. What’s a good place for sightseeing?"></a>J: Yes. What’s a good place for sightseeing?</h2><h2 id="T-If-you-have-a-lot-of-time-on-your-hands-you-can-walk-the-Freedom-Trail"><a href="#T-If-you-have-a-lot-of-time-on-your-hands-you-can-walk-the-Freedom-Trail" class="headerlink" title="T: If you have a lot of time on your hands, you can walk the Freedom Trail."></a>T: If you have a lot of time on your hands, you can walk the Freedom Trail.</h2><h2 id="J-I’m-kind-of-strapped-for-time"><a href="#J-I’m-kind-of-strapped-for-time" class="headerlink" title="J: I’m kind of strapped for time."></a>J: I’m kind of strapped for time.</h2><h2 id="T-In-that-case-whatever-else-you-do-you-must-check-out-the-observatory-on-the-63rd-floor-of-the-John-Hancock-Building"><a href="#T-In-that-case-whatever-else-you-do-you-must-check-out-the-observatory-on-the-63rd-floor-of-the-John-Hancock-Building" class="headerlink" title="T: In that case, whatever else you do, you must check out the observatory on the 63rd floor of the John Hancock Building."></a>T: In that case, whatever else you do, you must check out the observatory on the 63rd floor of the John Hancock Building.</h2><h2 id="J-Isn’t-the-building-all-glass"><a href="#J-Isn’t-the-building-all-glass" class="headerlink" title="J: Isn’t the building all glass?"></a>J: Isn’t the building all glass?</h2><h2 id="T-That’s-right-You-can’t-miss-it-Here’s-your-hotel-That’ll-be-17-50-please"><a href="#T-That’s-right-You-can’t-miss-it-Here’s-your-hotel-That’ll-be-17-50-please" class="headerlink" title="T: That’s right. You can’t miss it. Here’s your hotel. That’ll be $17.50, please."></a>T: That’s right. You can’t miss it. Here’s your hotel. That’ll be $17.50, please.</h2><h2 id="J-Here’s-20-00-Keep-the-change"><a href="#J-Here’s-20-00-Keep-the-change" class="headerlink" title="J: Here’s $20.00. Keep the change."></a>J: Here’s $20.00. Keep the change.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Touring by Taxi</title>
-      <link href="/post/1814120177.html"/>
-      <url>/post/1814120177.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-One-of-the-most-convenient-but-expensive-ways-to-get-around-a-city-in-any-country-is-by-taxi-And-in-some-cases-tipping-is-expected"><a href="#nbsp-nbsp-nbsp-nbsp-One-of-the-most-convenient-but-expensive-ways-to-get-around-a-city-in-any-country-is-by-taxi-And-in-some-cases-tipping-is-expected" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;One of the most convenient but expensive ways to get around a city in any country is by taxi. And in some cases, tipping is expected."></a>&nbsp;&nbsp;&nbsp;&nbsp;One of the most convenient but expensive ways to get around a city in any country is by taxi. And in some cases, tipping is expected.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-A-taxi-driver-knows-the-city-like-the-back-of-his-hand-He-can-tell-you-whatever-you-want-to-know-At-the-same-time-he’ll-be-your-personal-tour-guide-He-can-take-you-wherever-you-want-to-go-So-however-expensive-the-taxi-ride-may-be-the-advice-you-get-from-the-driver-will-certainly-be-worth-it"><a href="#nbsp-nbsp-nbsp-nbsp-A-taxi-driver-knows-the-city-like-the-back-of-his-hand-He-can-tell-you-whatever-you-want-to-know-At-the-same-time-he’ll-be-your-personal-tour-guide-He-can-take-you-wherever-you-want-to-go-So-however-expensive-the-taxi-ride-may-be-the-advice-you-get-from-the-driver-will-certainly-be-worth-it" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;A taxi driver knows the city like the back of his hand. He can tell you whatever you want to know. At the same time he’ll be your personal tour guide. He can take you wherever you want to go. So, however expensive the taxi ride may be, the advice you get from the driver will certainly be worth it."></a>&nbsp;&nbsp;&nbsp;&nbsp;A taxi driver knows the city like the back of his hand. He can tell you whatever you want to know. At the same time he’ll be your personal tour guide. He can take you wherever you want to go. So, however expensive the taxi ride may be, the advice you get from the driver will certainly be worth it.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>How to Attract Boys</title>
-      <link href="/post/1339764249.html"/>
-      <url>/post/1339764249.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Jason-is-talking-to-Kate-a-classmate-he-likes-very-much-J-Jason-K-Kate"><a href="#Jason-is-talking-to-Kate-a-classmate-he-likes-very-much-J-Jason-K-Kate" class="headerlink" title="Jason is talking to Kate, a classmate he likes very much. (J = Jason, K = Kate)"></a>Jason is talking to Kate, a classmate he likes very much. (J = Jason, K = Kate)</h2><h2 id="J-I-don’t-understand-why-you-dye-your-hair-and-wear-all-kinds-of-weird-colthes-Kate"><a href="#J-I-don’t-understand-why-you-dye-your-hair-and-wear-all-kinds-of-weird-colthes-Kate" class="headerlink" title="J: I don’t understand why you dye your hair and wear all kinds of weird colthes, Kate."></a>J: I don’t understand why you dye your hair and wear all kinds of weird colthes, Kate.</h2><h2 id="K-I-guess-that’s-how-I-attract-boys"><a href="#K-I-guess-that’s-how-I-attract-boys" class="headerlink" title="K: I guess that’s how I attract boys."></a>K: I guess that’s how I attract boys.</h2><h2 id="J-Yes-but-the-wrong-kind-of-boys"><a href="#J-Yes-but-the-wrong-kind-of-boys" class="headerlink" title="J: Yes, but the wrong kind of boys."></a>J: Yes, but the wrong kind of boys.</h2><h2 id="K-What-do-you-mean"><a href="#K-What-do-you-mean" class="headerlink" title="K: What do you mean?"></a>K: What do you mean?</h2><h2 id="J-The-type-of-guys-who-go-out-with-you-wear-earrings-and-have-tattoos-on-their-arms"><a href="#J-The-type-of-guys-who-go-out-with-you-wear-earrings-and-have-tattoos-on-their-arms" class="headerlink" title="J: The type of guys who go out with you wear earrings and have tattoos on their arms."></a>J: The type of guys who go out with you wear earrings and have tattoos on their arms.</h2><h2 id="K-What-kind-of-boys-do-you-think-I-should-go-out-with-then"><a href="#K-What-kind-of-boys-do-you-think-I-should-go-out-with-then" class="headerlink" title="K: What kind of boys do you think I should go out with then?"></a>K: What kind of boys do you think I should go out with then?</h2><h2 id="J-Uh…somebody-like-me-for-instance"><a href="#J-Uh…somebody-like-me-for-instance" class="headerlink" title="J: Uh…somebody like me, for instance."></a>J: Uh…somebody like me, for instance.</h2><h2 id="K-Oh-is-that-so"><a href="#K-Oh-is-that-so" class="headerlink" title="K: Oh, is that so?"></a>K: Oh, is that so?</h2><h2 id="J-The-day-will-come-when-you-know-I’m-right"><a href="#J-The-day-will-come-when-you-know-I’m-right" class="headerlink" title="J:The day will come when you know I’m right."></a>J:The day will come when you know I’m right.</h2><h2 id="K-We’ll-see"><a href="#K-We’ll-see" class="headerlink" title="K: We’ll see."></a>K: We’ll see.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>About Moral Values</title>
-      <link href="/post/1201948557.html"/>
-      <url>/post/1201948557.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="nbsp-nbsp-nbsp-nbsp-More-and-more-people-are-forgetting-the-saying-“Pride-comes-before-a-fall”-I-remember-only-a-few-years-ago-when-things-used-to-be-so-different-People-used-to-be-more-modest-and-humble"><a href="#nbsp-nbsp-nbsp-nbsp-More-and-more-people-are-forgetting-the-saying-“Pride-comes-before-a-fall”-I-remember-only-a-few-years-ago-when-things-used-to-be-so-different-People-used-to-be-more-modest-and-humble" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;More and more people are forgetting the saying, “Pride comes before a fall” I remember only a few years ago when things used to be so different. People used to be more modest and humble."></a>&nbsp;&nbsp;&nbsp;&nbsp;More and more people are forgetting the saying, “Pride comes before a fall” I remember only a few years ago when things used to be so different. People used to be more modest and humble.</h2><h2 id="nbsp-nbsp-nbsp-nbsp-As-I-looked-around-at-my-schoolmates-the-other-day-I-realized-how-diferent-things-are-People-are-so-much-more-pretenious-nowadays-With-their-fancy-colthes-and-stylish-hairdos-they-appear-too-materialistic-Which-is-not-to-my-liking-I-know-modernization-is-necessary-for-advancement-However-I-hope-we-don’t-lose-our-traditional-moral-values-along-the-way"><a href="#nbsp-nbsp-nbsp-nbsp-As-I-looked-around-at-my-schoolmates-the-other-day-I-realized-how-diferent-things-are-People-are-so-much-more-pretenious-nowadays-With-their-fancy-colthes-and-stylish-hairdos-they-appear-too-materialistic-Which-is-not-to-my-liking-I-know-modernization-is-necessary-for-advancement-However-I-hope-we-don’t-lose-our-traditional-moral-values-along-the-way" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;As I looked around at my schoolmates the other day. I realized how diferent things are. People are so much more pretenious nowadays. With their fancy colthes and stylish hairdos, they appear too materialistic, Which is not to my liking. I know modernization is necessary for advancement. However, I hope we don’t lose our traditional moral values along the way."></a>&nbsp;&nbsp;&nbsp;&nbsp;As I looked around at my schoolmates the other day. I realized how diferent things are. People are so much more pretenious nowadays. With their fancy colthes and stylish hairdos, they appear too materialistic, Which is not to my liking. I know modernization is necessary for advancement. However, I hope we don’t lose our traditional moral values along the way.</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p>赖世雄美语从头学-中级篇（上） </p></div> ]]></content>
-      
-      
-      <categories>
-          
-          <category> English </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>CSS3新特性</title>
       <link href="/post/2943041897.html"/>
       <url>/post/2943041897.html</url>
@@ -717,56 +350,6 @@
         <tags>
             
             <tag> css3新特性 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>HTTPS专题二</title>
-      <link href="/post/3572925213.html"/>
-      <url>/post/3572925213.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="闲言"><a href="#闲言" class="headerlink" title="闲言"></a>闲言</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> https </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>HTTPS专题一</title>
-      <link href="/post/4017532340.html"/>
-      <url>/post/4017532340.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><div class="note default"><p><a href="https://www.cnblogs.com/zxj015/p/6530766.html" target="_blank" rel="noopener">Https协议详解</a><br><a href="https://zhuanlan.zhihu.com/p/27395037" target="_blank" rel="noopener">HTTPS系列干货（一）：HTTPS 原理详解</a></p></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> https </tag>
             
         </tags>
       
@@ -802,85 +385,6 @@
     
     
     <entry>
-      <title>彻底搞懂JS正则表达式</title>
-      <link href="/post/359044131.html"/>
-      <url>/post/359044131.html</url>
-      
-        <content type="html"><![CDATA[<p>&gt;<strong>参考：</strong> <a href="https://mp.weixin.qq.com/s/4FXb3byOmilZl6pyijhtjA" target="_blank" rel="noopener">教科书式的正则匹配</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 正则表达式 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>大话VUE2.X源码</title>
-      <link href="/post/4071437440.html"/>
-      <url>/post/4071437440.html</url>
-      
-        <content type="html"><![CDATA[<blockquote><p><a href="https://www.cnblogs.com/sorrowx/p/7932242.html" target="_blank" rel="noopener">Vue2.x源码学习笔记-源码目录结构整理</a></p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vue2.x </tag>
-            
-            <tag> 源码 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>BFC到底是什么</title>
-      <link href="/post/1018110880.html"/>
-      <url>/post/1018110880.html</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>参考文件：<a href="https://blog.csdn.net/wky_csdn/article/details/73554720" target="_blank" rel="noopener">BFC原理及其应用</a><br><a href="https://segmentfault.com/q/1010000008875016" target="_blank" rel="noopener">关于BFC的特征，为什么说内部的box会在垂直方向一个接一个放置？</a></p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> BFC </tag>
-            
-            <tag> box </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>如何使用Http请求头Range实现多线程下载</title>
       <link href="/post/1155738838.html"/>
       <url>/post/1155738838.html</url>
@@ -902,35 +406,6 @@
             <tag> http </tag>
             
             <tag> range </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>如何使用NgZone优化你的项目</title>
-      <link href="/post/2673242036.html"/>
-      <url>/post/2673242036.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><div class="note default"><p><a href="https://www.jianshu.com/p/c939d6251c3a" target="_blank" rel="noopener">Angular 6 动态加载组件显示 NgZone runOutsideAngular</a><br>  <a href="https://www.cnblogs.com/whitewolf/p/zone-js.html" target="_blank" rel="noopener">zone.js - 暴力之美</a><br>  <a href="https://www.zcfy.cc/article/how-the-hell-does-zone-js-really-work-995.html" target="_blank" rel="noopener">Zone.js到底是如何工作的？</a></p></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> angular4 </tag>
-            
-            <tag> NgZone </tag>
-            
-            <tag> 优化 </tag>
             
         </tags>
       
