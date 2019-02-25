@@ -436,16 +436,15 @@
     <link href="http://yoursite.com/post/624146632.html"/>
     <id>http://yoursite.com/post/624146632.html</id>
     <published>2018-12-03T11:12:13.000Z</published>
-    <updated>2019-01-14T12:55:17.503Z</updated>
+    <updated>2019-02-25T14:48:01.431Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="数据可视化项目/dashboard.PNG" alt="dashobard"></p>]]></content>
+    <content type="html"><![CDATA[<img src="/post/624146632/dashboard.PNG">]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;数据可视化项目/dashboard.PNG&quot; alt=&quot;dashobard&quot;&gt;&lt;/p&gt;
-
+        &lt;img src=&quot;/post/624146632/dashboard.PNG&quot;&gt;
       
     
     </summary>
