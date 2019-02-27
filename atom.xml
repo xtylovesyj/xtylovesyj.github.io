@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-26T12:41:28.386Z</updated>
+  <updated>2019-02-25T11:41:48.542Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/post/1.html"/>
-    <id>http://yoursite.com/post/1.html</id>
-    <published>2019-02-26T12:41:28.386Z</published>
-    <updated>2019-02-26T12:41:28.386Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>使用Sass混合指令@mixin和媒体查询实现页面响应式布局</title>
@@ -484,6 +470,39 @@
       <category term="http" scheme="http://yoursite.com/tags/http/"/>
     
       <category term="keepalive" scheme="http://yoursite.com/tags/keepalive/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据可视化项目</title>
+    <link href="http://yoursite.com/post/624146632.html"/>
+    <id>http://yoursite.com/post/624146632.html</id>
+    <published>2018-12-03T11:12:13.000Z</published>
+    <updated>2019-02-25T14:48:01.431Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/post/624146632/dashboard.PNG">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;img src=&quot;/post/624146632/dashboard.PNG&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="d3.js" scheme="http://yoursite.com/tags/d3-js/"/>
+    
+      <category term="jquery" scheme="http://yoursite.com/tags/jquery/"/>
+    
+      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+    
+      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
     
   </entry>
   
