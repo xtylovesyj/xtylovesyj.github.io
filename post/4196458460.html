@@ -1,4 +1,1119 @@
-<!DOCTYPE html><html class="theme-next pisces use-motion" lang="zh-Hans"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/jun1.png?v=6.5.0"><link rel="icon" type="image/png" sizes="32x32" href="/images/jun.png?v=6.5.0"><link rel="icon" type="image/png" sizes="16x16" href="/images/jun.png?v=6.5.0"><link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Pisces",version:"6.5.0",sidebar:{position:"right",display:"hide",offset:12,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!1,fastclick:!1,lazyload:!1,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><meta name="description" content="这是一篇加密的文章。"><meta name="keywords" content="css javascript html html5 css3 布局 前端优化 性能优化 自适应 flex 继承 ES6 sass 姚俊的博客"><meta property="og:type" content="article"><meta property="og:title" content="蛋白质结构预测系统"><meta property="og:url" content="http://yoursite.com/post/4196458460.html"><meta property="og:site_name" content="姚俊的博客"><meta property="og:description" content="这是一篇加密的文章。"><meta property="og:locale" content="zh-Hans"><meta property="og:updated_time" content="2019-02-26T12:35:20.189Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="蛋白质结构预测系统"><meta name="twitter:description" content="这是一篇加密的文章。"><link rel="alternate" href="/atom.xml" title="姚俊的博客" type="application/atom+xml"><link rel="canonical" href="http://yoursite.com/post/4196458460.html"><script type="text/javascript" id="page.configurations">CONFIG.page={sidebar:""}</script><title>蛋白质结构预测系统 | 姚俊的博客</title><noscript><style type="text/css">.sidebar-inner,.use-motion .brand,.use-motion .collection-title,.use-motion .comments,.use-motion .menu-item,.use-motion .motion-element,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .logo,.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.logo-line-after i{right:initial}</style></noscript></head><body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-right page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">姚俊的博客</span><span class="logo-line-after"><i></i></span></a></div></div><div class="site-nav-toggle"> <button aria-label="Toggle navigation bar"><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-projects"><a href="/projects/" rel="section"><i class="menu-item-icon fa fa-fw fa-html5"></i><br>项目</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="http://yoursite.com/post/4196458460.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="胖胖"><meta itemprop="description" content="生命不息奋斗不止"><meta itemprop="image" content="/uploads/avatar.jpeg"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="姚俊的博客"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">蛋白质结构预测系统</h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">Posted on</span> <time title="Created: 2019-02-21 23:09:54" itemprop="dateCreated datePublished" datetime="2019-02-21T23:09:54+08:00">2019-02-21</time> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i></span> <span class="post-meta-item-text">Edited on</span> <time title="Modified: 2019-02-26 20:35:20" itemprop="dateModified" datetime="2019-02-26T20:35:20+08:00">2019-02-26</time></span></div></header><div class="post-body" itemprop="articleBody"><script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script><div id="hbe-security"><div class="hbe-input-container"> <input type="password" class="hbe-form-control" id="pass" placeholder="enter password to read."> <label for="pass">enter password to read.</label><div class="bottom-line"></div></div></div><div id="decryptionError" style="display:none">Incorrect Password!</div><div id="noContentError" style="display:none">No content to display!</div><div id="encrypt-blog" style="display:none"> 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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css"></div><div></div><div><div style="padding:10px 0;margin:20px auto;width:90%;text-align:center"><div>你的支持是我继续创作的动力！</div> <button id="rewardButton" disable="enable" onclick='var qr=document.getElementById("QR");"none"===qr.style.display?qr.style.display="block":qr.style.display="none"'> <span>求打赏</span></button><div id="QR" style="display:none"><div id="wechat" style="display:inline-block"> <img id="wechat_qr" src="/images/webchat.png" alt="胖胖 微信扫一扫"><p>微信扫一扫</p></div></div></div></div><footer class="post-footer"><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/post/1972029411.html" rel="next" title="前端个人简历"><i class="fa fa-chevron-left"></i> 前端个人简历</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/post/2804030403.html" rel="prev" title="使用Sass混合指令@mixin和媒体查询实现页面响应式布局">使用Sass混合指令@mixin和媒体查询实现页面响应式布局<i class="fa fa-chevron-right"></i></a></div></div></footer></div><div><div><div style="text-align:center;color:#ccc;font-size:15px">----本文结束<i class="fa fa fa-smile-o" style="font-size:24px"></i> 感谢您的阅读----</div></div></div></article></div></div><div class="comments" id="comments"><div id="lv-container" data-id="city" data-uid="MTAyMC80MTc5Ny8xODM0Mw=="></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><section class="site-overview-wrap sidebar-panel sidebar-panel-active"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpeg" alt="胖胖"><p class="site-author-name" itemprop="name">胖胖</p><p class="site-description motion-element" itemprop="description">生命不息奋斗不止</p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">20</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">2</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">22</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/xtylovesyj" title="GitHub &rarr; https://github.com/xtylovesyj" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="mailto:459828686@qq.com" title="E-Mail &rarr; mailto:459828686@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i> E-Mail</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-block"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-link"></i> 学习园地</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"> <a href="https://www.w3cplus.com/blogs/airen" title="https://www.w3cplus.com/blogs/airen" rel="noopener" target="_blank">Airen的博客</a></li><li class="links-of-blogroll-item"> <a href="https://www.zhangxinxu.com/wordpress/category/js/" title="https://www.zhangxinxu.com/wordpress/category/js/" rel="noopener" target="_blank">张鑫旭</a></li><li class="links-of-blogroll-item"> <a href="http://www.ruanyifeng.com/blog/javascript/" title="http://www.ruanyifeng.com/blog/javascript/" rel="noopener" target="_blank">阮一峰日志JS篇</a></li><li class="links-of-blogroll-item"> <a href="https://www.liaoxuefeng.com/" title="https://www.liaoxuefeng.com/" rel="noopener" target="_blank">廖雪峰的官方网站</a></li><li class="links-of-blogroll-item"> <a href="http://web.jobbole.com/category/javascript-2/" title="http://web.jobbole.com/category/javascript-2/" rel="noopener" target="_blank">伯乐在线</a></li><li class="links-of-blogroll-item"> <a href="https://www.jianshu.com/u/6584d42e4600" title="https://www.jianshu.com/u/6584d42e4600" rel="noopener" target="_blank">Layzimo</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/bookmark/1230000012117582" title="https://segmentfault.com/bookmark/1230000012117582" rel="noopener" target="_blank">javascript深入系列</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/bookmark/1230000012117691" title="https://segmentfault.com/bookmark/1230000012117691" rel="noopener" target="_blank">javascript专题系列</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/bookmark/1230000012646912" title="https://segmentfault.com/bookmark/1230000012646912" rel="noopener" target="_blank">前端基础进阶系列文章</a></li><li class="links-of-blogroll-item"> <a href="https://blog.seosiwei.com/" title="https://blog.seosiwei.com/" rel="noopener" target="_blank">王微的博客</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/minnanitkong" title="https://segmentfault.com/u/minnanitkong" rel="noopener" target="_blank">前端小智</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/evilboy" title="https://segmentfault.com/u/evilboy" rel="noopener" target="_blank">疯狂的技术宅</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/feleti" title="https://segmentfault.com/u/feleti" rel="noopener" target="_blank">周小肆</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/hyangteng" title="https://segmentfault.com/u/hyangteng" rel="noopener" target="_blank">hyangteng</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/senntyou" title="https://segmentfault.com/u/senntyou" rel="noopener" target="_blank">senntyou</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/langlixingzhou/articles?page=1&sort=vote" title="https://segmentfault.com/u/langlixingzhou/articles?page=1&sort=vote" rel="noopener" target="_blank">浪里行舟的博客</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/meetbo/articles?sort=vote" title="https://segmentfault.com/u/meetbo/articles?sort=vote" rel="noopener" target="_blank">九死蚕传人bo</a></li><li class="links-of-blogroll-item"> <a href="https://segmentfault.com/u/chen93/articles?page=1&sort=vote" title="https://segmentfault.com/u/chen93/articles?page=1&sort=vote" rel="noopener" target="_blank">守候</a></li></ul></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span><span class="with-love" id="animate"><i class="fa fa-user"></i></span> <span class="author" itemprop="copyrightHolder">胖胖</span></div><div class="powered-by"><i class="fa fa-user-md"></i> <span id="busuanzi_container_site_uv">本站访客数:<span id="busuanzi_value_site_uv"></span></span></div><div class="theme-info"><div class="powered-by"></div> <span class="post-count">博客全站共18.1k字</span></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" color="red" opacity="0.5" zindex="1000" count="999" src="true"></script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script><script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script><script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script><script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script><script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script><script type="text/javascript">window.livereOptions={refer:"post/4196458460.html"},function(e,t){var n,r=e.getElementsByTagName(t)[0];"function"!=typeof LivereTower&&((n=e.createElement(t)).src="https://cdn-city.livere.com/js/embed.dist.js",n.async=!0,r.parentNode.insertBefore(n,r))}(document,"script")</script><script type="text/javascript">
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/jun1.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/jun.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/jun.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.5.0',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="这是一篇加密的文章。">
+<meta name="keywords" content="css javascript html html5 css3 布局 前端优化 性能优化 自适应 flex 继承 ES6 sass 姚俊的博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蛋白质结构预测系统">
+<meta property="og:url" content="http://yoursite.com/post/4196458460.html">
+<meta property="og:site_name" content="姚俊的博客">
+<meta property="og:description" content="这是一篇加密的文章。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-26T12:35:20.189Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="蛋白质结构预测系统">
+<meta name="twitter:description" content="这是一篇加密的文章。">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="姚俊的博客" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/post/4196458460.html">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>蛋白质结构预测系统 | 姚俊的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">姚俊的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-projects">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/projects/" rel="section"><i class="menu-item-icon fa fa-fw fa-html5"></i> <br>项目</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/4196458460.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="胖胖">
+      <meta itemprop="description" content="生命不息奋斗不止">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="姚俊的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">蛋白质结构预测系统
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-21 23:09:54" itemprop="dateCreated datePublished" datetime="2019-02-21T23:09:54+08:00">2019-02-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-02-26 20:35:20" itemprop="dateModified" datetime="2019-02-26T20:35:20+08:00">2019-02-26</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="enter password to read.">
+    <label for="pass">enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
+        
+      
+    </div>
+
+    
+
+    
+       
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>你的支持是我继续创作的动力！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>求打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/webchat.png" alt="胖胖 微信扫一扫">
+        <p>微信扫一扫</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/1972029411.html" rel="next" title="前端个人简历">
+                <i class="fa fa-chevron-left"></i> 前端个人简历
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/2804030403.html" rel="prev" title="使用Sass混合指令@mixin和媒体查询实现页面响应式布局">
+                使用Sass混合指令@mixin和媒体查询实现页面响应式布局 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  <div>
+
+<div>
+
+    <div style="text-align:center;color: #ccc;font-size:15px;">----本文结束 <i class="fa fa fa-smile-o" style="font-size:24px;"></i> 感谢您的阅读----</div>
+
+</div>
+
+
+</div>
+
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTc5Ny8xODM0Mw=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpeg" alt="胖胖">
+            
+              <p class="site-author-name" itemprop="name">胖胖</p>
+              <p class="site-description motion-element" itemprop="description">生命不息奋斗不止</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/xtylovesyj" title="GitHub &rarr; https://github.com/xtylovesyj" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:459828686@qq.com" title="E-Mail &rarr; mailto:459828686@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                学习园地
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3cplus.com/blogs/airen" title="https://www.w3cplus.com/blogs/airen" rel="noopener" target="_blank">Airen的博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhangxinxu.com/wordpress/category/js/" title="https://www.zhangxinxu.com/wordpress/category/js/" rel="noopener" target="_blank">张鑫旭</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/javascript/" title="http://www.ruanyifeng.com/blog/javascript/" rel="noopener" target="_blank">阮一峰日志JS篇</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="https://www.liaoxuefeng.com/" rel="noopener" target="_blank">廖雪峰的官方网站</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://web.jobbole.com/category/javascript-2/" title="http://web.jobbole.com/category/javascript-2/" rel="noopener" target="_blank">伯乐在线</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jianshu.com/u/6584d42e4600" title="https://www.jianshu.com/u/6584d42e4600" rel="noopener" target="_blank">Layzimo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/bookmark/1230000012117582" title="https://segmentfault.com/bookmark/1230000012117582" rel="noopener" target="_blank">javascript深入系列</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/bookmark/1230000012117691" title="https://segmentfault.com/bookmark/1230000012117691" rel="noopener" target="_blank">javascript专题系列</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/bookmark/1230000012646912" title="https://segmentfault.com/bookmark/1230000012646912" rel="noopener" target="_blank">前端基础进阶系列文章</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.seosiwei.com/" title="https://blog.seosiwei.com/" rel="noopener" target="_blank">王微的博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/minnanitkong" title="https://segmentfault.com/u/minnanitkong" rel="noopener" target="_blank">前端小智</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/evilboy" title="https://segmentfault.com/u/evilboy" rel="noopener" target="_blank">疯狂的技术宅</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/feleti" title="https://segmentfault.com/u/feleti" rel="noopener" target="_blank">周小肆</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/hyangteng" title="https://segmentfault.com/u/hyangteng" rel="noopener" target="_blank">hyangteng</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/senntyou" title="https://segmentfault.com/u/senntyou" rel="noopener" target="_blank">senntyou</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/langlixingzhou/articles?page=1&sort=vote" title="https://segmentfault.com/u/langlixingzhou/articles?page=1&sort=vote" rel="noopener" target="_blank">浪里行舟的博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/meetbo/articles?sort=vote" title="https://segmentfault.com/u/meetbo/articles?sort=vote" rel="noopener" target="_blank">九死蚕传人bo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/u/chen93/articles?page=1&sort=vote" title="https://segmentfault.com/u/chen93/articles?page=1&sort=vote" rel="noopener" target="_blank">守候</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">胖胖</span>
+
+  
+
+  
+</div>
+<!--
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v6.5.0</div>
+
+-->
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共18.1k字</span>
+</div>
+
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+      
+        
+      
+  
+  <script type="text/javascript" color="red" opacity="0.5" zindex="1000" count="999" src="true"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: 'post/4196458460.html'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -316,7 +1431,29 @@
         onPopupClose();
       }
     });
-  </script><script type="text/x-mathjax-config">
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -325,11 +1462,47 @@
       },
       TeX: {equationNumbers: { autoNumber: "AMS" }}
     });
-</script><script type="text/x-mathjax-config">
+</script>
+
+<script type="text/x-mathjax-config">
     MathJax.Hub.Queue(function() {
       var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
     });
-</script><script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/lib/bookmark/bookmark.min.js?v=1.0"></script><script type="text/javascript">bookmark.scrollToMark("auto","#more")</script></body><script type="text/javascript" src="/js/src/love.js"></script></html>
+</script>
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.scrollToMark('auto', "#more");
+  
+  </script>
+
+
+  
+
+  
+
+</body>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</html>
